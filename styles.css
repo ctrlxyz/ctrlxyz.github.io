@@ -12,7 +12,7 @@
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 12px;
-  --max-width: 1360px;
+  --max-width: 1520px;
 }
 
 * {
@@ -54,6 +54,12 @@ a {
   width: min(calc(100% - 32px), var(--max-width));
   margin: 0 auto;
   position: relative;
+}
+
+@media (min-width: 1400px) {
+  .site-shell {
+    width: min(calc(100% - 48px), var(--max-width));
+  }
 }
 
 .site-header {
@@ -493,7 +499,7 @@ a {
 }
 
 .detail-copy {
-  max-width: 980px;
+  max-width: 1080px;
 }
 
 .detail-card {
