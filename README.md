@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Control Engineering, Robotics and Intelligent Systems Website
 
 This repository contains a static lab website designed for deployment on GitHub Pages.
@@ -34,3 +35,6 @@ Replace these placeholders as needed:
 - Lab title: `Control Engineering, Robotics and Intelligent Systems`
 - Principal investigator: `Professor Shenglin Mu`
 - Emails, address, member names, publication entries, and news items
+=======
+# ctrlxyz.github.io
+>>>>>>> origin/main
