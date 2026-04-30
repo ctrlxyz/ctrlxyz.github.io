@@ -1,9 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Meal Assistance Robot System Research | Control Engineering Laboratory</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="./styles.css"></head>
-<body><div class="site-shell"><header class="site-header"><a class="brand" href="./index-en.html" aria-label="Back to top"><span class="brand-mark">CRIS</span><span class="brand-copy"><strong>Control Engineering, Robotics and Intelligent Systems</strong><span>Control Engineering Laboratory</span></span></a><nav class="site-nav" aria-label="Page navigation"><a href="./index-en.html">Home</a><a href="#overview">Overview</a><a href="#system">System Design</a><a href="#evaluation">Evaluation</a></nav></header>
-<main class="detail-main"><section class="detail-hero section"><div class="detail-copy"><p class="eyebrow"><span>Research Topic</span><span>Meal Assistance Robot System</span></p><div class="lang-switch" aria-label="Language switch"><a href="./research-meal-assistance-robot-ja.html">日本語</a><a href="./research-meal-assistance-robot-en.html" aria-current="page">English</a><a href="./research-meal-assistance-robot.html">中文</a></div><h1>Research on the Development of Meal Assistance Robot Systems</h1><p class="hero-text">This research develops meal assistance robot systems for care and home environments by integrating food recognition, mouth recognition, manipulator control, delivery mechanisms, and psychological evaluation.</p></div></section>
-<section id="overview" class="section"><div class="section-heading"><p class="eyebrow">Overview</p><h2>Overview</h2></div><article class="detail-card"><p>Japan faces growing demand for meal assistance because of population aging and shortages of caregivers. Meal assistance is both time-consuming and physically demanding, making it an important target for robotic support.</p><p>This research has evolved from systems designed to use commercially available lunch boxes to more advanced meal assistance robots capable of recognizing, acquiring, and delivering solid food while considering user acceptance.</p></article></section>
-<section id="system" class="section"><div class="section-heading"><p class="eyebrow">System Design</p><h2>System Design</h2></div><div class="card-grid"><article class="info-card detail-card"><h3>Recognition and Control</h3><p>The system integrates ROS, MATLAB, a RealSense camera, and a multi-joint manipulator to detect food items and the user’s mouth and to perform controlled delivery.</p></article><article class="info-card detail-card"><h3>Food Acquisition and Delivery</h3><p>A combination of toothpick piercing and spoon-based delivery is used for stable handling of solid food items.</p></article><article class="info-card detail-card"><h3>Dedicated Transfer Mechanism</h3><p>A dedicated transfer mechanism is introduced near the user’s mouth so that the main manipulator does not directly approach the face, improving operational safety and psychological comfort.</p></article><article class="info-card detail-card"><h3>Psychological Evaluation</h3><p>Different delivery trajectories and offering motions are compared through user evaluation to examine perceived safety, predictability, and comfort.</p></article></div></section>
-<section id="evaluation" class="section contact-section"><div class="section-heading"><p class="eyebrow">Evaluation</p><h2>Evaluation and Development</h2></div><article class="detail-card"><p>From 2023 to 2026, this project progressed from basic system integration and visual recognition to end-effector design, transfer mechanism development, and psychological assessment. Future work will focus on practical deployment, user acceptance, and caregiver burden reduction in real care settings.</p></article></section>
-</main></div></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research on the Development of Meal Assistance Robot Systems | Control Engineering Laboratory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index-en.html" aria-label="Back to top">
+        <span class="brand-mark">CRIS</span>
+        <span class="brand-copy">
+          <strong>Control Engineering, Robotics and Intelligent Systems</strong>
+          <span>Control Engineering Laboratory</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Page navigation">
+        <a href="./index-en.html">Home</a>
+        <a href="#background">Background</a>
+        <a href="#method">Method</a>
+        <a href="#experiment">Experimental Design</a>
+        <a href="#significance">Significance</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <section class="detail-hero section">
+        <div class="detail-copy">
+          <p class="eyebrow">
+            <span>Research Topic</span>
+            <span>Meal Assistance Robot System</span>
+          </p>
+          <div class="lang-switch" aria-label="Language switch">
+            <a href="./research-meal-assistance-robot-ja.html">日本語</a>
+            <a href="./research-meal-assistance-robot-en.html" aria-current="page">English</a>
+            <a href="./research-meal-assistance-robot.html">中文</a>
+          </div>
+          <h1>Research on the Development of Meal Assistance Robot Systems</h1>
+          <p class="hero-text">
+            This research develops meal assistance robot systems for care and home environments
+            by integrating food recognition, mouth recognition, manipulator control,
+            food delivery mechanisms, and psychological evaluation.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#background">View Background</a>
+            <a class="button button-secondary" href="./index-en.html">Back to Home</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="background" class="section">
+        <div class="section-heading"><p class="eyebrow">Background</p><h2>Background</h2></div>
+        <article class="detail-card">
+          <p>
+            As Japan faces rapid population aging and shortages of caregivers,
+            meal assistance has become one of the more demanding tasks in care and home support.
+            For people with upper-limb impairment or those who require continuous support,
+            robotic systems that can safely assist eating are increasingly important.
+          </p>
+          <p>
+            Existing support devices still face limitations in flexibility of food recognition,
+            reliability of handling, and consideration of user psychology.
+            This research therefore approaches meal assistance from both engineering functionality and human acceptance.
+          </p>
+        </article>
+      </section>
+
+      <section id="method" class="section">
+        <div class="section-heading"><p class="eyebrow">Method</p><h2>Method</h2></div>
+        <div class="card-grid">
+          <article class="info-card detail-card"><h3>Recognition and Control</h3><p>The system integrates ROS, MATLAB, a RealSense camera, and a multi-joint manipulator to coordinate food recognition, mouth recognition, and delivery control.</p></article>
+          <article class="info-card detail-card"><h3>Food Acquisition and Delivery</h3><p>We study end-effector designs including toothpick piercing and spoon-based delivery for stable acquisition and transfer of solid food items.</p></article>
+          <article class="info-card detail-card"><h3>Dedicated Transfer Module</h3><p>A dedicated transfer module near the user’s mouth reduces the need for the main manipulator to approach the face directly, improving psychological comfort and safety.</p></article>
+          <article class="info-card detail-card"><h3>Psychological Evaluation</h3><p>Different offering trajectories and strategies are compared to analyze perceived safety, predictability, and comfort.</p></article>
+        </div>
+      </section>
+
+      <section id="experiment" class="section">
+        <div class="section-heading"><p class="eyebrow">Experiment</p><h2>Experimental Design</h2></div>
+        <article class="detail-card">
+          <p>
+            The project proceeds through staged experiments, beginning with basic system integration using commercially available lunch boxes
+            and extending to visual recognition, end-effector design, mouth delivery, dedicated transfer modules, and user evaluations.
+          </p>
+          <p>
+            Recognition accuracy, transfer success rate, motion stability, and subjective user impressions
+            are evaluated together in order to compare different mechanisms and control strategies under realistic support scenarios.
+          </p>
+        </article>
+      </section>
+
+      <section id="significance" class="section contact-section">
+        <div class="section-heading"><p class="eyebrow">Significance</p><h2>Significance</h2></div>
+        <article class="detail-card">
+          <p>
+            The goal of this work is to establish a practical meal assistance robot system for care and home environments.
+            Its significance lies not only in improving robotic mechanisms and control,
+            but also in reducing caregiver burden while increasing independence and psychological comfort for users.
+          </p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

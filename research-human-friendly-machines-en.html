@@ -1,9 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Human-Friendly Intelligent Machine Behavior | Control Engineering Laboratory</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="./styles.css"></head>
-<body><div class="site-shell"><header class="site-header"><a class="brand" href="./index-en.html" aria-label="Back to top"><span class="brand-mark">CRIS</span><span class="brand-copy"><strong>Control Engineering, Robotics and Intelligent Systems</strong><span>Control Engineering Laboratory</span></span></a><nav class="site-nav" aria-label="Page navigation"><a href="./index-en.html">Home</a><a href="#concept">Concept</a><a href="#motion">Motion</a><a href="#goal">Goal</a></nav></header>
-<main class="detail-main"><section class="detail-hero section"><div class="detail-copy"><p class="eyebrow"><span>Research Topic</span><span>Human-Friendly Intelligent Machine Behavior</span></p><div class="lang-switch" aria-label="Language switch"><a href="./research-human-friendly-machines-ja.html">日本語</a><a href="./research-human-friendly-machines-en.html" aria-current="page">English</a><a href="./research-human-friendly-machines.html">中文</a></div><h1>Key Factors for Intelligent Machine Behavior that Feels Safe and Psychologically Comfortable to Humans</h1><p class="hero-text">This research explores the design conditions for intelligent machines that can coexist with humans in a psychologically acceptable and reassuring manner, with a focus on structure design, motion generation, and perception.</p></div></section>
-<section id="concept" class="section"><div class="section-heading"><p class="eyebrow">Concept</p><h2>Design Concept</h2></div><article class="detail-card"><p>In intelligent machine systems, structural design—including degrees of freedom—is one of the key elements. Machines that share space with humans for carrying and delivering daily objects must be acceptable, familiar, and behaviorally predictable.</p><p>We therefore consider intelligent machines as natural extensions of familiar tools and devices rather than entirely separate and unfamiliar entities. Lowering the learning cost and psychological burden is essential for human-machine coexistence.</p></article></section>
-<section id="motion" class="section"><div class="section-heading"><p class="eyebrow">Motion</p><h2>Motion Characteristics</h2></div><article class="detail-card"><p>While industrial robots have traditionally prioritized precision, speed, and efficiency, intelligent machines for human environments must also adapt to human rhythm, safety, psychological comfort, and softness of motion.</p><p>Our research draws inspiration from human movement, which is typically smooth, coordinated, and often perceived as dynamically beautiful. Such properties have value not only physically but also perceptually.</p><p>In particular, the ability of human motion to suppress undesirable components such as jitter and discontinuity suggests important design principles for human-friendly intelligent machines.</p></article></section>
-<section id="goal" class="section contact-section"><div class="section-heading"><p class="eyebrow">Goal</p><h2>Research Goals</h2></div><article class="detail-card"><ul class="detail-list"><li>Quantitative analysis of smooth and high-quality human motion characteristics</li><li>Extraction of motion factors affecting perception and psychological response</li><li>Mapping of these factors to intelligent machine structure and control design</li></ul><p>The ultimate goal is to establish a motion generation method that combines engineering performance with human friendliness.</p></article></section>
-</main></div></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Factors for Human-Friendly Intelligent Machine Behavior | Control Engineering Laboratory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index-en.html" aria-label="Back to top">
+        <span class="brand-mark">CRIS</span>
+        <span class="brand-copy">
+          <strong>Control Engineering, Robotics and Intelligent Systems</strong>
+          <span>Control Engineering Laboratory</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Page navigation">
+        <a href="./index-en.html">Home</a>
+        <a href="#background">Background</a>
+        <a href="#method">Method</a>
+        <a href="#experiment">Experimental Design</a>
+        <a href="#significance">Significance</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <section class="detail-hero section">
+        <div class="detail-copy">
+          <p class="eyebrow">
+            <span>Research Topic</span>
+            <span>Human-Friendly Intelligent Machine Behavior</span>
+          </p>
+          <div class="lang-switch" aria-label="Language switch">
+            <a href="./research-human-friendly-machines-ja.html">日本語</a>
+            <a href="./research-human-friendly-machines-en.html" aria-current="page">English</a>
+            <a href="./research-human-friendly-machines.html">中文</a>
+          </div>
+          <h1>Key Factors for Intelligent Machine Behavior that Feels Safe and Psychologically Comfortable to Humans</h1>
+          <p class="hero-text">
+            This research explores how intelligent machines can behave in ways that are predictable,
+            familiar, and psychologically acceptable to humans, with a focus on structure design,
+            motion generation, and human perception.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#background">View Background</a>
+            <a class="button button-secondary" href="./index-en.html">Back to Home</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="background" class="section">
+        <div class="section-heading"><p class="eyebrow">Background</p><h2>Background</h2></div>
+        <article class="detail-card">
+          <p>
+            In intelligent machine design, structural configuration, including degrees of freedom,
+            is one of the key factors that determines whether a machine can be naturally accepted by humans.
+            When machines are expected to share the same space with people and support daily tasks such as carrying and delivering objects,
+            functionality alone is not enough; predictability, familiarity, and affinity are also essential.
+          </p>
+          <p>
+            For this reason, we regard intelligent machines as natural extensions of familiar tools and devices
+            rather than completely separate and unfamiliar technical entities.
+            If users must consciously adapt themselves to a robot, the resulting learning burden may hinder desirable human-machine coexistence.
+          </p>
+        </article>
+      </section>
+
+      <section id="method" class="section">
+        <div class="section-heading"><p class="eyebrow">Method</p><h2>Method</h2></div>
+        <article class="detail-card">
+          <p>
+            Our approach is inspired by the properties of human motion.
+            Unlike traditional industrial robots that mainly prioritize precision, speed, and efficiency,
+            intelligent machines designed for human environments must also be compatible with human rhythm, safety,
+            psychological comfort, and softness of motion.
+          </p>
+          <p>
+            We therefore analyze the smoothness, coordination, and suppression of undesirable motion components seen in human movement,
+            extract the motion factors that affect human perception and psychological response,
+            and map those factors into the structural and control design of intelligent machines.
+          </p>
+        </article>
+      </section>
+
+      <section id="experiment" class="section">
+        <div class="section-heading"><p class="eyebrow">Experiment</p><h2>Experimental Design</h2></div>
+        <article class="detail-card">
+          <p>
+            The experimental design consists of two linked stages.
+            First, high-quality human movement is quantitatively measured and modeled.
+            Second, the extracted characteristics are introduced into machine motion generation and compared before and after integration.
+          </p>
+          <p>
+            Trajectory smoothness, predictability, and coordination are evaluated together with subjective user impressions
+            such as reassurance, familiarity, and comfort, allowing us to build an evaluation framework that reflects both engineering performance and human experience.
+          </p>
+        </article>
+      </section>
+
+      <section id="significance" class="section contact-section">
+        <div class="section-heading"><p class="eyebrow">Significance</p><h2>Significance</h2></div>
+        <article class="detail-card">
+          <p>
+            The ultimate goal is to establish a motion generation method that combines engineering capability with human friendliness.
+            This work provides design principles for future human-machine coexistence in homes, healthcare, welfare, and public environments,
+            while reducing learning cost, psychological burden, and the sense of unfamiliarity people may feel toward intelligent machines.
+          </p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

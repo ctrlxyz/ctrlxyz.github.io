@@ -1,10 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Remote Learning Participation Support with a Gaze-Input Robot | Control Engineering Laboratory</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="./styles.css"></head>
-<body><div class="site-shell"><header class="site-header"><a class="brand" href="./index-en.html" aria-label="Back to top"><span class="brand-mark">CRIS</span><span class="brand-copy"><strong>Control Engineering, Robotics and Intelligent Systems</strong><span>Control Engineering Laboratory</span></span></a><nav class="site-nav" aria-label="Page navigation"><a href="./index-en.html">Home</a><a href="#background">Background</a><a href="#system">System Concept</a><a href="#method">Method</a><a href="#significance">Significance</a></nav></header>
-<main class="detail-main"><section class="detail-hero section"><div class="detail-copy"><p class="eyebrow"><span>Research Topic</span><span>Remote Learning Support with Gaze-Input Robot</span></p><div class="lang-switch" aria-label="Language switch"><a href="./research-remote-learning-robot-ja.html">日本語</a><a href="./research-remote-learning-robot-en.html" aria-current="page">English</a><a href="./research-remote-learning-robot.html">中文</a></div><h1>Development of a Gaze-Input Robot System for Remote Learning Participation Support</h1><p class="hero-text">This project develops a remote classroom participation support system that enables students with long-term absence due to illness or disability to participate in class from hospital rooms or home using gaze input and an avatar robot.</p></div></section>
-<section id="background" class="section"><div class="section-heading"><p class="eyebrow">Background</p><h2>Background</h2></div><article class="detail-card"><p>In Japan, the number of children and students unable to attend school for long periods because of serious illness or injury has been increasing. Existing support mechanisms such as hospital classes and home-visit education are important, but they face limitations in coverage, interactivity, and opportunities for social participation.</p><p>Therefore, remote education systems are needed not only to deliver learning content but also to preserve classroom presence, interaction, and social development.</p></article></section>
-<section id="system" class="section"><div class="section-heading"><p class="eyebrow">System Concept</p><h2>System Concept</h2></div><article class="detail-card"><p>The proposed system allows a student to control an avatar robot in the classroom through gaze input from a hospital or home environment. It is designed to provide a low-burden interface, realistic classroom participation, and timely awareness of the learner’s state by the teacher.</p></article></section>
-<section id="method" class="section"><div class="section-heading"><p class="eyebrow">Method</p><h2>Method</h2></div><div class="card-grid"><article class="info-card detail-card"><h3>Single-Camera Gaze Input</h3><p>A low-cost gaze-input method based on an ordinary web camera and PC is used to estimate the learner’s gaze direction.</p></article><article class="info-card detail-card"><h3>Avatar Robot Control</h3><p>The estimated gaze direction is used to control an omnidirectional classroom robot and its onboard camera so that the user can obtain desired classroom viewpoints.</p></article><article class="info-card detail-card"><h3>Robust Gaze Estimation</h3><p>Particle filtering is introduced to improve robustness against eyelid occlusion and small involuntary eye movements, and to support users wearing glasses.</p></article><article class="info-card detail-card"><h3>Learning Support Mechanism</h3><p>The system can automatically detect teacher pointing gestures and highlight important areas such as key regions on a blackboard in order to reduce cognitive burden.</p></article></div></section>
-<section id="significance" class="section contact-section"><div class="section-heading"><p class="eyebrow">Significance</p><h2>Significance</h2></div><article class="detail-card"><p>This system is applicable not only to long-term absent students but also to remote education in broader contexts such as pandemic-related learning. It contributes to richer interaction and stronger immersion in remote education.</p></article></section>
-</main></div></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Development of a Gaze-Input Robot System for Remote Learning Participation Support | Control Engineering Laboratory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index-en.html" aria-label="Back to top">
+        <span class="brand-mark">CRIS</span>
+        <span class="brand-copy">
+          <strong>Control Engineering, Robotics and Intelligent Systems</strong>
+          <span>Control Engineering Laboratory</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Page navigation">
+        <a href="./index-en.html">Home</a>
+        <a href="#background">Background</a>
+        <a href="#method">Method</a>
+        <a href="#experiment">Experimental Design</a>
+        <a href="#significance">Significance</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <section class="detail-hero section">
+        <div class="detail-copy">
+          <p class="eyebrow">
+            <span>Research Topic</span>
+            <span>Remote Learning Support with Gaze-Input Robot</span>
+          </p>
+          <div class="lang-switch" aria-label="Language switch">
+            <a href="./research-remote-learning-robot-ja.html">日本語</a>
+            <a href="./research-remote-learning-robot-en.html" aria-current="page">English</a>
+            <a href="./research-remote-learning-robot.html">中文</a>
+          </div>
+          <h1>Development of a Gaze-Input Robot System for Remote Learning Participation Support</h1>
+          <p class="hero-text">
+            This research develops a remote learning participation support system for students
+            who cannot attend school for long periods because of illness or disability,
+            using gaze input and an avatar robot to enable classroom participation.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#background">View Background</a>
+            <a class="button button-secondary" href="./index-en.html">Back to Home</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="background" class="section">
+        <div class="section-heading"><p class="eyebrow">Background</p><h2>Background</h2></div>
+        <article class="detail-card">
+          <p>
+            In Japan, the number of children and students who cannot attend school for long periods because of serious illness or injury has been increasing.
+            Existing support mechanisms such as hospital classes and home-visit education are valuable,
+            but they still face limitations in coverage, interactivity, learning opportunities, and support for social development.
+          </p>
+          <p>
+            Remote education systems are therefore expected not only to deliver educational content
+            but also to preserve classroom presence, two-way interaction, and meaningful participation.
+          </p>
+        </article>
+      </section>
+
+      <section id="method" class="section">
+        <div class="section-heading"><p class="eyebrow">Method</p><h2>Method</h2></div>
+        <div class="card-grid">
+          <article class="info-card detail-card"><h3>Single-Camera Gaze Input</h3><p>A low-cost input method using an ordinary web camera and PC is adopted to estimate the learner’s gaze direction with minimal physical burden.</p></article>
+          <article class="info-card detail-card"><h3>Avatar Robot Control</h3><p>The estimated gaze information is used to control an omnidirectional classroom robot and its onboard camera so that the learner can actively obtain desired viewpoints.</p></article>
+          <article class="info-card detail-card"><h3>Robust Gaze Estimation</h3><p>Particle filtering and related techniques are introduced to improve robustness against eyelid occlusion, involuntary eye movement, and the use of glasses.</p></article>
+          <article class="info-card detail-card"><h3>Lesson Understanding Support</h3><p>Teacher pointing gestures are recognized to highlight important areas such as blackboard content, reducing cognitive burden for the learner.</p></article>
+        </div>
+      </section>
+
+      <section id="experiment" class="section">
+        <div class="section-heading"><p class="eyebrow">Experiment</p><h2>Experimental Design</h2></div>
+        <article class="detail-card">
+          <p>
+            The experiments evaluate interaction effectiveness, gaze estimation accuracy,
+            robot control stability, and the quality of classroom participation.
+            Technical verification is conducted for gaze input and robot operation,
+            followed by classroom-oriented user studies focusing on presence, burden, and interaction.
+          </p>
+          <p>
+            In addition, the effectiveness of teacher gesture recognition and highlighted instructional cues
+            is examined in relation to learning support and reduced cognitive load.
+          </p>
+        </article>
+      </section>
+
+      <section id="significance" class="section contact-section">
+        <div class="section-heading"><p class="eyebrow">Significance</p><h2>Significance</h2></div>
+        <article class="detail-card">
+          <p>
+            The goal of this research is to build a remote learning participation support system
+            that combines accessibility, interaction, and immersion for long-term absent students.
+            Its significance lies not only in promoting educational equity,
+            but also in providing a human-centered and practical framework for remote education in diverse real-world situations.
+          </p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

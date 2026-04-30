@@ -1,9 +1,117 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>人にとって安心でき心理的に好ましい知能機械行動の要件 | Control Engineering Laboratory</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="./styles.css"></head>
-<body><div class="site-shell"><header class="site-header"><a class="brand" href="./index-ja.html" aria-label="トップへ戻る"><span class="brand-mark">CRIS</span><span class="brand-copy"><strong>Control Engineering, Robotics and Intelligent Systems</strong><span>制御工学研究室</span></span></a><nav class="site-nav" aria-label="ページ内ナビ"><a href="./index-ja.html">トップ</a><a href="#concept">設計理念</a><a href="#motion">運動特性</a><a href="#goal">研究目標</a></nav></header>
-<main class="detail-main"><section class="detail-hero section"><div class="detail-copy"><p class="eyebrow"><span>Research Topic</span><span>Human-Friendly Intelligent Machine Behavior</span></p><div class="lang-switch" aria-label="Language switch"><a href="./research-human-friendly-machines-ja.html" aria-current="page">日本語</a><a href="./research-human-friendly-machines-en.html">English</a><a href="./research-human-friendly-machines.html">中文</a></div><h1>人にとって安心でき心理的に好ましい知能機械行動の要件</h1><p class="hero-text">本研究では、人と知能機械が共存する環境において、構造設計、運動生成、心理的受容性の観点から、人にやさしい知能機械行動の実現条件を探ります。</p></div></section>
-<section id="concept" class="section"><div class="section-heading"><p class="eyebrow">Concept</p><h2>設計理念</h2></div><article class="detail-card"><p>知能機械の設計では、自由度構成を含む構造設計が重要な要素の一つです。人と同じ空間で物品搬送や日常支援を行う機械には、受容性と親和性、そして予測可能な運動が求められます。</p><p>そのため、構造はできるだけ簡潔で、既存の道具や設備の自然な延長として位置づけられるべきだと考えています。ユーザが無理なく使い方を身につけられることが、人機共存の前提となります。</p></article></section>
-<section id="motion" class="section"><div class="section-heading"><p class="eyebrow">Motion</p><h2>運動特性</h2></div><article class="detail-card"><p>産業用ロボットでは高精度・高速・高効率が重視されてきましたが、人と共存する知能機械には、それだけでなく、人のリズムとの調和、安全性、心理的快適性、そして動きの柔らかさが必要です。</p><p>本研究では、人間運動に見られる高い平滑性と協調性に着目しています。優れた人間の動作は、物理的効率だけでなく、知覚的にも好ましく感じられる特徴を持っています。</p><p>特に、抖動や不連続性といった望ましくない運動成分を抑えた滑らかな動きは、人にやさしい知能機械の設計に重要な示唆を与えます。</p></article></section>
-<section id="goal" class="section contact-section"><div class="section-heading"><p class="eyebrow">Goal</p><h2>研究目標</h2></div><article class="detail-card"><ul class="detail-list"><li>人間の滑らかで質の高い運動特性の定量分析</li><li>人の知覚・心理反応に影響する運動因子の抽出</li><li>それらの因子を知能機械の構造と制御設計へ写像</li></ul><p>最終的には、工学的性能と人間親和性を両立する運動生成法の確立を目指します。</p></article></section>
-</main></div></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人にとって安心でき心理的に好ましい知能機械行動の要件 | Control Engineering Laboratory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index-ja.html" aria-label="トップへ戻る">
+        <span class="brand-mark">CRIS</span>
+        <span class="brand-copy">
+          <strong>Control Engineering, Robotics and Intelligent Systems</strong>
+          <span>制御工学研究室</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="ページ内ナビ">
+        <a href="./index-ja.html">トップ</a>
+        <a href="#background">研究背景</a>
+        <a href="#method">研究方法</a>
+        <a href="#experiment">実験設計</a>
+        <a href="#significance">目標意義</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <section class="detail-hero section">
+        <div class="detail-copy">
+          <p class="eyebrow">
+            <span>Research Topic</span>
+            <span>Human-Friendly Intelligent Machine Behavior</span>
+          </p>
+          <div class="lang-switch" aria-label="Language switch">
+            <a href="./research-human-friendly-machines-ja.html" aria-current="page">日本語</a>
+            <a href="./research-human-friendly-machines-en.html">English</a>
+            <a href="./research-human-friendly-machines.html">中文</a>
+          </div>
+          <h1>人にとって安心でき心理的に好ましい知能機械行動の要件</h1>
+          <p class="hero-text">
+            本研究では，人と知能機械が共存する環境において，
+            構造設計，運動生成，心理的受容性の観点から，
+            人にやさしい知能機械行動の成立条件を探ります。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#background">研究背景を見る</a>
+            <a class="button button-secondary" href="./index-ja.html">トップへ戻る</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="background" class="section">
+        <div class="section-heading"><p class="eyebrow">Background</p><h2>研究背景</h2></div>
+        <article class="detail-card">
+          <p>
+            知能機械の設計においては，自由度構成を含む構造設計が重要な要素の一つです。
+            人と同じ空間で物品搬送や日常支援を行う機械には，機能だけでなく，
+            受容性，親和性，そして運動の予測可能性が求められます。
+          </p>
+          <p>
+            そのため私たちは，知能機械を既存の道具や設備の自然な延長として捉えるべきだと考えています。
+            使い方を無理なく身につけられることが，人機共存の前提であり，
+            ユーザに過剰な適応を求める設計は望ましくありません。
+          </p>
+        </article>
+      </section>
+
+      <section id="method" class="section">
+        <div class="section-heading"><p class="eyebrow">Method</p><h2>研究方法</h2></div>
+        <article class="detail-card">
+          <p>
+            本研究では，人間運動に見られる平滑性，協調性，不快な運動成分の抑制特性に着目します。
+            従来の産業用ロボットが重視してきた高精度・高速・高効率に加え，
+            人と共存する知能機械には，人のリズムとの調和，安全性，心理的快適性，柔らかな動きが必要です。
+          </p>
+          <p>
+            そこで，人間の運動から知覚や心理反応に影響する因子を抽出し，
+            それらを知能機械の構造設計と制御設計へ写像することで，
+            人にやさしい運動生成法を工学的に構築します。
+          </p>
+        </article>
+      </section>
+
+      <section id="experiment" class="section">
+        <div class="section-heading"><p class="eyebrow">Experiment</p><h2>実験設計</h2></div>
+        <article class="detail-card">
+          <p>
+            実験では，まず人間の質の高い運動特性を定量的に計測・分析し，
+            その特徴量を知能機械の運動生成へ導入します。
+            その上で，導入前後の軌道特性，平滑性，予測可能性を比較し，
+            さらに主観評価を通じて安心感や親和感への影響を検証します。
+          </p>
+          <p>
+            このように，人間運動の分析と機械運動の評価を往復する実験設計によって，
+            工学性能と人間親和性を両立する条件を明らかにします。
+          </p>
+        </article>
+      </section>
+
+      <section id="significance" class="section contact-section">
+        <div class="section-heading"><p class="eyebrow">Significance</p><h2>目標意義</h2></div>
+        <article class="detail-card">
+          <p>
+            最終的な目標は，工学的性能と心理的受容性を両立する知能機械の運動生成法を確立することです。
+            これにより，家庭，医療，福祉，公共空間などにおける人機共存システムの設計指針を与え，
+            知能機械を人にとってより自然で身近な存在へと近づけることを目指します。
+          </p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

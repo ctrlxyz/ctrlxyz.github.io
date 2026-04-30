@@ -1,10 +1,109 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>視線入力型ロボットによる遠隔学習参加支援システムの開発 | Control Engineering Laboratory</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="./styles.css"></head>
-<body><div class="site-shell"><header class="site-header"><a class="brand" href="./index-ja.html" aria-label="トップへ戻る"><span class="brand-mark">CRIS</span><span class="brand-copy"><strong>Control Engineering, Robotics and Intelligent Systems</strong><span>制御工学研究室</span></span></a><nav class="site-nav" aria-label="ページ内ナビ"><a href="./index-ja.html">トップ</a><a href="#background">背景</a><a href="#system">システム構想</a><a href="#method">方法</a><a href="#significance">意義</a></nav></header>
-<main class="detail-main"><section class="detail-hero section"><div class="detail-copy"><p class="eyebrow"><span>Research Topic</span><span>Remote Learning Support with Gaze-Input Robot</span></p><div class="lang-switch" aria-label="Language switch"><a href="./research-remote-learning-robot-ja.html" aria-current="page">日本語</a><a href="./research-remote-learning-robot-en.html">English</a><a href="./research-remote-learning-robot.html">中文</a></div><h1>視線入力型ロボットによる遠隔学習参加支援システムの開発</h1><p class="hero-text">長期欠席を余儀なくされる児童・生徒が、病室や自宅から授業へ主体的に参加できるようにするため、視線入力と分身ロボットを用いた遠隔授業参加支援システムを研究しています。</p></div></section>
-<section id="background" class="section"><div class="section-heading"><p class="eyebrow">Background</p><h2>研究背景</h2></div><article class="detail-card"><p>日本では、重い病気や外傷などにより長期的に学校へ通えない子どもが増えています。院内学級や訪問教育は重要な支援ですが、地域差、教材利用の制限、集団活動の不足など多くの課題が残っています。</p><p>そのため、学習機会の保障だけでなく、教室への参加感、双方向性、社会性の維持を含む新しい遠隔教育支援の仕組みが求められています。</p></article></section>
-<section id="system" class="section"><div class="section-heading"><p class="eyebrow">System Concept</p><h2>システム構想</h2></div><article class="detail-card"><p>本研究では、長期欠席生が病室や自宅から視線によって分身ロボットを操作し、教室内の情報取得と授業参加を行えるシステムを提案しています。身体的負担の少ない直感的なインタフェースと、教室内での臨場感ある双方向参加の両立を目指しています。</p></article></section>
-<section id="method" class="section"><div class="section-heading"><p class="eyebrow">Method</p><h2>方法</h2></div><div class="card-grid"><article class="info-card detail-card"><h3>単眼視線入力</h3><p>一般的な Web カメラと PC を用いた低コストな単眼視線入力法を採用し、ユーザの注視方向を推定します。</p></article><article class="info-card detail-card"><h3>分身ロボット制御</h3><p>視線情報に基づいて教室内の全方向移動ロボットと搭載カメラを制御し、希望する視点を取得します。</p></article><article class="info-card detail-card"><h3>視線推定の高精度化</h3><p>粒子フィルタを導入し、眼瞼遮蔽や微小眼球運動による誤差を抑え、眼鏡装着時にも対応可能な推定法を検討します。</p></article><article class="info-card detail-card"><h3>授業理解支援</h3><p>教師の指さし行動を自動認識し、黒板の重要部分を強調提示することで、学習者の認知負担軽減を図ります。</p></article></div></section>
-<section id="significance" class="section contact-section"><div class="section-heading"><p class="eyebrow">Significance</p><h2>研究意義</h2></div><article class="detail-card"><p>本システムは長期欠席生の授業参加支援だけでなく、パンデミック下の遠隔授業やアクセシブル教育支援にも応用可能であり、遠隔教育の双方向性と没入感向上に寄与します。</p></article></section>
-</main></div></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>視線入力型ロボットによる遠隔学習参加支援システムの開発 | Control Engineering Laboratory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index-ja.html" aria-label="トップへ戻る">
+        <span class="brand-mark">CRIS</span>
+        <span class="brand-copy">
+          <strong>Control Engineering, Robotics and Intelligent Systems</strong>
+          <span>制御工学研究室</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="ページ内ナビ">
+        <a href="./index-ja.html">トップ</a>
+        <a href="#background">研究背景</a>
+        <a href="#method">研究方法</a>
+        <a href="#experiment">実験設計</a>
+        <a href="#significance">目標意義</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <section class="detail-hero section">
+        <div class="detail-copy">
+          <p class="eyebrow">
+            <span>Research Topic</span>
+            <span>Remote Learning Support with Gaze-Input Robot</span>
+          </p>
+          <div class="lang-switch" aria-label="Language switch">
+            <a href="./research-remote-learning-robot-ja.html" aria-current="page">日本語</a>
+            <a href="./research-remote-learning-robot-en.html">English</a>
+            <a href="./research-remote-learning-robot.html">中文</a>
+          </div>
+          <h1>視線入力型ロボットによる遠隔学習参加支援システムの開発</h1>
+          <p class="hero-text">
+            重い病気や障害などにより長期的に通学できない児童・生徒を対象に，
+            視線入力と分身ロボットを用いた遠隔授業参加支援システムを研究しています。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#background">研究背景を見る</a>
+            <a class="button button-secondary" href="./index-ja.html">トップへ戻る</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="background" class="section">
+        <div class="section-heading"><p class="eyebrow">Background</p><h2>研究背景</h2></div>
+        <article class="detail-card">
+          <p>
+            日本では，重い病気や外傷などにより長期間学校へ通えない子どもが増えています。
+            院内学級や訪問教育は重要な支援ですが，地域差，教材利用の制限，双方向性の不足，
+            そして社会的な学びの機会不足といった課題が残されています。
+          </p>
+          <p>
+            そのため，遠隔教育には学習機会の保障だけでなく，
+            教室への参加感，双方向的なやり取り，社会性の維持を支える仕組みが求められています。
+          </p>
+        </article>
+      </section>
+
+      <section id="method" class="section">
+        <div class="section-heading"><p class="eyebrow">Method</p><h2>研究方法</h2></div>
+        <div class="card-grid">
+          <article class="info-card detail-card"><h3>単眼視線入力</h3><p>一般的な Web カメラと PC を用いて視線方向を推定し，身体的負担の少ない低コストな入力方式を実現します。</p></article>
+          <article class="info-card detail-card"><h3>分身ロボット制御</h3><p>視線情報に基づいて教室内の全方向移動ロボットと搭載カメラを制御し，学習者が望む視点を取得できるようにします。</p></article>
+          <article class="info-card detail-card"><h3>高精度視線推定</h3><p>粒子フィルタなどを導入し，眼瞼遮蔽や微小眼球運動，眼鏡装着時にも対応できる頑健な視線推定法を検討します。</p></article>
+          <article class="info-card detail-card"><h3>授業理解支援</h3><p>教師の指さしを認識して黒板の重要部分を強調提示し，学習者の認知負担を軽減します。</p></article>
+        </div>
+      </section>
+
+      <section id="experiment" class="section">
+        <div class="section-heading"><p class="eyebrow">Experiment</p><h2>実験設計</h2></div>
+        <article class="detail-card">
+          <p>
+            実験では，視線入力の精度，ロボット制御の安定性，教室参加の実現性を段階的に評価します。
+            まず，単眼視線入力とロボット制御の技術的性能を検証し，
+            その後，授業場面を想定した利用実験によって参加感や操作負担を調べます。
+          </p>
+          <p>
+            さらに，教師の指示認識と重要箇所提示機能についても，
+            授業理解支援への有効性を実際の授業文脈の中で評価します。
+          </p>
+        </article>
+      </section>
+
+      <section id="significance" class="section contact-section">
+        <div class="section-heading"><p class="eyebrow">Significance</p><h2>目標意義</h2></div>
+        <article class="detail-card">
+          <p>
+            本研究の目標は，長期欠席生に対して，アクセスしやすく，
+            双方向性と臨場感を備えた遠隔学習参加支援システムを提供することです。
+            これは教育機会の公平性に資するだけでなく，
+            疾病，障害，感染症流行時など多様な状況に対応できる人間中心の遠隔教育技術へとつながります。
+          </p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
