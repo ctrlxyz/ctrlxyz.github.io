@@ -12,7 +12,7 @@
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 12px;
-  --max-width: 1160px;
+  --max-width: 1360px;
 }
 
 * {
@@ -493,7 +493,7 @@ a {
 }
 
 .detail-copy {
-  max-width: 860px;
+  max-width: 980px;
 }
 
 .detail-card {
