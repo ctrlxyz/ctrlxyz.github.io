@@ -1,0 +1,237 @@
+Proceedings of the 14th IIAE International Conference on Industrial Application Engineering 2026 
+© 2026 The Institute of Industrial Applications Engineers, Japan. 
+ 
+Development of a Meal Assistance Robot Based on Spoon-Offering 
+Motions and Its Psychological Evaluation on Users 
+ 
+Daiju Fujiia, Satoru Shibataa, Shenglin Mua,* 
+ 
+a Graduate School of Science and Engineering, Ehime University 
+3 Bunkyo-cho, Matsuyama, Japan 
+ 
+*Corresponding Author: mu.shenglin.du@ehime-u.ac.jp 
+ 
+ 
+Abstract 
+This study proposes an improved feeding assistance 
+system integrating a multi -joint manipulator with a 
+dedicated food -transfer mechanism to enhance operational 
+safety and user acceptance. By separating food transport 
+from the primary manipulator, the system reduces 
+psychological discomfort associated with direct utensil 
+approach. To determine motion strategies that ensure both 
+safety and psychological comfort, three food -transfer 
+motions were designed and comparatively evaluated. A 
+psychological assessment experiment using the rating scale 
+method was conducted to quantify user perception. The 
+findings provide practical design insights for developing 
+safe, reliable, and psychologically acceptable meal 
+assistance robots for real-world caregiving applications. 
+Keywords: assistive robotics, meal assistance system, 
+psychological evaluation. 
+1. Introduction 
+Japan is currently facing a super-aging society in which 
+the proportion of individuals requiring nursing care 
+continues to increase due to population aging, while the 
+number of caregivers is declining because of a decreasing 
+birthrate (1-2). Meal assistance, particularly for individuals 
+with upper-limb impairments, requires substantial caregiver 
+time and represents a significant physical and psychological 
+burden. Therefore, robotic systems capable of supporting 
+feeding tasks are increasingly needed in clinical and 
+home-care environments. 
+In our previous work, a meal assistance robot 
+incorporating a toothpick -based piercing motion and a 
+spoon-offering motion was proposed  (3). However, because 
+the toothpick was directly transported to the user’s mouth, 
+the system induced psychological discomfort and fear in 
+some users, raising concerns regarding safety and 
+acceptability. 
+To address this issue, this study proposes an improved 
+meal assistance system consisting of a multi -joint 
+manipulator and an additional dedicated food -transfer 
+mechanism that transports food to the vicinity of the user’s 
+mouth. By separating the food -delivery function from the 
+main manipulator, the system aims to enhance operational 
+safety and reduce psychological burden. 
+Furthermore, to identify motion strategies that ensure 
+high safety while minimizing psychological stress, three 
+different food -transfer motions were designed and 
+experimentally compared. A psychological evaluation 
+experiment was conducted using the rating scale method to 
+quantitatively assess user perception. The results provide 
+design insights for safe and psychologically acceptable 
+meal assistance robots suitable for practical industrial and 
+caregiving applications. 
+2. Meal Assistance System Configuration 
+2.1 Overall System Architecture 
+Figure 1 illustrates the overall configuration of the 
+proposed meal assistance system. The system is designed to 
+support feeding tasks for users seated in front of the robot. 
+A multi-joint robotic arm (Open Manipulator) mounted on a 
+base is positioned facing the user, and food items are placed 
+on a platform integrated with the base. 
+The control architecture is implemented on a control 
+PC integrating the Robot Operating System (ROS) and 
+MATLAB, as shown in Fig. 2. A depth -sensing stereo 
+vision camera (Intel RealSense D435i) is mounted on the 
+robotic arm to acquire three -dimensional point cloud data. 
+Using this 3D information, the positions of both the food 
+and the user’s mouth are recognized through a 
+convolutional neural network (CNN) -based detection 
+algorithm. The calculated coordinates are then used to 
+control the manipulator for food handling and delivery. 
+The system is designed to achieve stable and precise 
+food transfer while ensuring user safety and psychological 
+comfort (4). 
+2.2 Manipulator-Based Feeding Module 
+In the initial system design, the articulated robotic arm 
+was responsible for both grasping and delivering the food to 
+the user’s mouth. A toothpick attached to the end effector 
+was used to pierce the food item, and the manipulator 
+transported it directly toward the user. 
+RealSense D435i provided depth information that 
+enabled accurate centroid estimation of the food item. 
+Based on the estimated centroid, the end effector was 
+positioned precisely to achieve stable piercing. After 
+grasping, the manipulator moved along a predefined 
+trajectory to deliver the food to the user’s mouth. 
+Although this approach achieved stable transport, 
+directly moving a sharp object such as a toothpick toward 
+the user’s face raised safety concerns and induced 
+psychological discomfort. The perceived risk and fear 
+associated with this motion limited user acceptance, 
+highlighting the need for a safer and more psychologically 
+acceptable delivery strategy. 
+To mitigate this issue, a spoon -equipped end effector 
+was introduced. However, even with a spoon, directly 
+transporting food solely using the manipulator could still 
+cause anxiety due to the approach trajectory and proximity 
+to the face. Therefore, a structural redesign separating 
+grasping and delivery functions was proposed  as shown in 
+Fig. 1. 
+ 
+Fig. 1.  O verall configuration of meal assistance 
+system. 
+ 
+Fig. 2.  Control architecture of the meal assistance system. 
+
+2.3 Proposed Food-Transfer Mechanism 
+To enhance safety and reduce psychological burden, a 
+dedicated food -transfer mechanism was newly designed 
+and integrated with the existing manipulator system. The 
+manipulator performs food recognition and grasping, while 
+the transfer mechanism is responsible for transporting the 
+food from the grasping position to the vicinity of the user’s 
+mouth. 
+The external appearance of the transfer mechanism is 
+shown in Fig. 3. The mechanism consists of two 
+subsystems: a forward extension mechanism and a vertical 
+lifting mechanism. By combining these two motions, 
+flexible and psychologically adaptive transfer strategies can 
+be realized. 
+The forward extension mechanism was designed based 
+on a slider–crank concept. It consists of a spoon -shaped end 
+effector, a servo motor, a driving link connecting the motor 
+to the end effector, and an intermediate link. These 
+components are mounted on the upper platform of the 
+lifting mechanism. When the servo motor rotates, the spoon 
+carrying the food is pushed forward. The extension distance 
+can be controlled by adjusting the servo rotation angle. 
+The lifting mechanism is constructed using a linkage 
+system driven by a servo motor. By rotating the motor shaft 
+connected to the linkage, vertical motion is generated while 
+maintaining the horizontal orientation of the extension 
+mechanism. The height of the spoon can be precisely 
+adjusted by controlling the motor angle, ensuring stable 
+vertical positioning during delivery. 
+By separating the grasping and transport functions, the 
+system reduces the direct approach of the manipulator 
+toward the user’s face. This structural design enhances 
+operational safety and enables the implementation of 
+multiple motion strategies aimed at improving 
+psychological acceptance. The detailed motion strategies 
+are described in the following section. 
+3. Motion Strategies 
+This section describes the three proposed food -transfer 
+motions implemented using the developed transfer 
+mechanism.  
+A. Transfer Motion 1 
+The sequence of Transfer Motion 1 is illustrated in Fig. 
+4. In this strategy, the lifting motion is performed first, 
+ 
+Fig. 3. Transfer device. 
+ 
+Fig. 4. Motion 1 of transfer device. 
+ 
+Fig. 5. Motion 2 of transfer device. 
+ 
+Fig. 6. Motion 3 of transfer device. 
+
+followed by the forward extension motion. The food is 
+initially raised to the height of the user’s mouth and then 
+delivered forward. Because the food reaches the appropriate 
+vertical position before being extended toward the user, this 
+motion allows the user to more easily perceive and adjust 
+the distance to the approaching food. This stepwise 
+movement is expected to improve spatial predictability and 
+reduce uncertainty during feeding assistance. 
+B. Transfer Motion 2 
+Transfer Motion 2 is shown in Fig. 5. In this strategy, 
+the lifting and forward extension motions are executed 
+simultaneously. By combining both movements, the food is 
+transported along a shorter, more direct trajectory toward 
+the user’s mouth. This motion enables delivery within the 
+minimum transfer distance, potentially reducing operation 
+time and improving task efficiency. 
+C. Transfer Motion 3 
+Transfer Motion 3 is illustrated in Fig. 6. In this 
+approach, the forward extension motion is performed first, 
+followed by the lifting motion. Because the extension is 
+executed at a position farther from the user’s face, the 
+subsequent upward movement occurs after the spoon has 
+already advanced. This motion is designed to reduce 
+psychological discomfort by avoiding a direct upward 
+approach near the user’s face, thereby minimizing 
+perceived fear or anxiety during food delivery. 
+4. Psychological Evaluation Using the Rating 
+Scale Method 
+A psychological evaluation experiment was conducted 
+using a five -point semantic differential scale with 14 
+participants in their twenties (average height approximately 
+170 cm). The participants were seated facing the transfer 
+mechanism approximately 20 cm from the table and were 
+asked to experience each transfer motion. 
+After each motion was completed, participants 
+evaluated the motion using a five -point scale for six 
+adjective pairs shown in Figs. 7 –9. During the experiment, 
+a food model (fried chicken sample) was placed on the 
+spoon. The mechanism performed a forward extension of 
+130 mm and a lifting motion from the table height to 350 
+mm. 
+The results of the psychological evaluation are 
+presented in Figs. 7 –9. In each figure, filled circles 
+represent the mean values, and error bars indicate standard 
+deviations. 
+For transfer motion 1 (Fig. 7), high ratings were 
+obtained for the adjective pairs “safe –dangerous” and 
+“predictable–unexpected.” In addition, relatively high 
+scores were also observed for “like –dislike.” The mean 
+scores for “calm–surprising” and “human-like–mechanical” 
+were below the neutral value of 3. These results indicate 
+that while the motion was perceived as safe and predictable, 
+it was also regarded as somewhat surprising and 
+mechanical rather than human-like. 
+ For transfer motion 2 (Fig. 8), all evaluation items 
+received mean scores above the neutral value of 3. In 
+particular, the item “like–dislike” showed the highest score, 
+indicating a strong overall preference for this motion. 
+ 
+Fig. 8. Results of the psychological evaluation for 
+motion 2. 
+ 
+Fig. 9. Results of the psychological evaluation for 
+motion 3. 
+ 
+Fig. 7. Results of the psychological evaluation for 
+motion 1. 

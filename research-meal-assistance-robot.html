@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>进食支援机器人系统开发研究 | Control Engineering Laboratory</title>
+  <meta
+    name="description"
+    content="控制工学研究室关于进食支援机器人系统开发研究的说明页面。"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="返回首页">
+        <span class="brand-mark">CRIS</span>
+        <span class="brand-copy">
+          <strong>Control Engineering, Robotics and Intelligent Systems</strong>
+          <span>爱媛大学大学院，理工学研究科，机械智能工学系，控制工学研究室</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="页面导航">
+        <a href="./index.html">返回首页</a>
+        <a href="#overview">研究概要</a>
+        <a href="#system">系统设计</a>
+        <a href="#evaluation">评价与发展</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <section class="detail-hero section">
+        <div class="detail-copy">
+          <p class="eyebrow">
+            <span>Research Topic</span>
+            <span>Meal Assistance Robot System</span>
+          </p>
+          <h1>进食支援机器人系统开发研究</h1>
+          <p class="hero-text">
+            本研究面向护理与居家照护环境中的进食支援需求，
+            围绕食物识别、口部识别、多关节机械臂控制、送食机构设计与用户心理评价，
+            持续探索安全、稳定且具有良好接受性的进食支援机器人系统。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#overview">查看研究内容</a>
+            <a class="button button-secondary" href="./index.html">返回首页</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>研究概要</h2>
+        </div>
+        <article class="detail-card">
+          <p>
+            日本社会正面临高龄化加速与护理人力不足的双重压力，进食支援作为日常照护中耗时且负担较大的任务之一，亟需通过机器人技术进行辅助。本研究围绕上肢障碍者与需要护理支援人群的进食场景，开发可在实际生活环境中应用的进食支援机器人系统。
+          </p>
+          <p>
+            相关研究从可使用市售便当的进食支援系统出发，逐步扩展到面向固体食物的识别、抓取与送食，实现了从实验室验证到更贴近真实使用场景的系统发展。
+          </p>
+        </article>
+      </section>
+
+      <section id="system" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">System Design</p>
+          <h2>系统设计</h2>
+        </div>
+        <div class="card-grid">
+          <article class="info-card detail-card">
+            <h3>识别与控制基础</h3>
+            <p>
+              研究基于 ROS、MATLAB、多关节机械臂与 RealSense 深度相机进行系统构建，通过视觉信息获取食物与用户口部位置，实现后续抓取与送食控制。
+            </p>
+          </article>
+          <article class="info-card detail-card">
+            <h3>食物获取与送食机制</h3>
+            <p>
+              系统采用牙签穿刺与勺送食相结合的方式，实现固体食物的稳定获取与运送；同时通过对机械臂末端机构的优化，提升食物传递过程中的安全性与可靠性。
+            </p>
+          </article>
+          <article class="info-card detail-card">
+            <h3>独立送食机构设计</h3>
+            <p>
+              在后续研究中，为降低机械臂直接靠近面部带来的不安感，进一步引入独立送食机构，将抓取功能与口部附近的送食功能分离，从而改善操作安全性与用户接受性。
+            </p>
+          </article>
+          <article class="info-card detail-card">
+            <h3>心理可接受性评价</h3>
+            <p>
+              通过对不同送食轨迹与差出动作进行比较，并结合主观评价方法，对用户在安全感、可预测性、舒适性与心理负担方面的感受进行分析，为进食支援机器人设计提供依据。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="evaluation" class="section contact-section">
+        <div class="section-heading">
+          <p class="eyebrow">Evaluation</p>
+          <h2>评价与发展</h2>
+        </div>
+        <article class="detail-card">
+          <p>
+            从 2023 到 2026 年的相关研究表明，该课题已逐步形成从系统平台搭建、视觉识别、末端执行器设计，到送食机构改进和心理评价的连续研究脉络。研究不仅关注机械上的实现可行性，也强调机器人在真实照护场景中的可接受性与低心理负担特性。
+          </p>
+          <p>
+            后续可继续在本页面补充相关论文、实验装置照片、系统结构图、送食动作示意图以及用户评价结果，形成完整的项目介绍页面。
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Control Engineering Laboratory</p>
+      <a href="./index.html">Back to home</a>
+    </footer>
+  </div>
+</body>
+</html>

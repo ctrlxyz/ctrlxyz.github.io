@@ -1,0 +1,157 @@
+ 
+ 
+[No.24-1] 日本機械学会 2024 年度年次大会 〔2024.9.8-11，愛媛大学〕 
+ 
+爪楊枝による突き刺しとスプーンによる差出に基づく食事支援ロボットの開発 
+Development of a meal-assistance robot based on piercing food by toothpick and bring food by 
+spoon to human mouth 
+ 
+○岩本 拓哉*1，穆 盛林*1，柴田 論*1 
+Hiroya IW AMOTO*1，Shenglin Mu*1，and Satoru Shibata*1 
+*1 愛媛大学 Ehime University 
+ 
+Japan has entered an aging society with a declining birthrate, and the proportion of elderly people is increasing year 
+by year. This has resulted in a shortage of nursing care personnel. Among the nursing care tasks, meal assistance, which 
+requires a large amount of time, is a great burden for caregivers. In this study, we proposed and constructed a system with 
+an articulated robot for solid food as a basic approach to develop a meal support system that can reduce the burden of 
+meal delivery work in advance and can be used with commercially available lunch boxes. The proposed system first 
+recognizes solid food using a CNN (ResNet50 and YOLOv2), acquires solid food using a piercing mechanism using a 
+toothpick, then recognizes the user's mouth using a CNN, and then carries the food to the mouth using a manipulator 
+while holding it with a spoon to prevent it from falling. Experiments were conducted on actual solid foods, and the 
+effectiveness of the proposed system was confirmed. 
+Key Words : Meal-assistance robot , Piercing by toothpick, Bring by spoon, CNN, Recogntion of foods and mouth 
+1. 緒   言  
+日本は少子高齢社会に突入し， 高齢者の割合が年々増加する現状の上， 少子化により介護人材が不足している．
+また，日常の介護作業に注目すると，食事支援作業は多くの時間がかかるため，介護者にとって大きな負担にな
+る．そのため，自動的に被介護者の食事を支援できるロボットを用いたシステム(以下，食事支援システム)が必要
+とされている．従来の食事支援システムとして，多関節型ロボットのマイスプーン(1)や，iARM(2)，Obi(3)，直交座
+標型食事支援ロボット(4)等が開発されている．しかし，操作するのにある程度ノウハウが必要である点や事前に
+配膳作業が必要な点が問題とされている．また，食物の獲得・運搬方法としてはスプーンとフォークによる把持
+やスプーンで掬う機構がとられているが，隣り合う食物への干渉や運搬時の落下が問題としてあげられる．そこ
+で我々の研究グループは，事前の配膳作業を不要とし，多種多様な食物の入っている市販の弁当箱に対応でき，
+安定して動作する食事支援システムの開発に取り組んできた．食物の獲得については，安定しておりかつ，隣り
+合う食物や弁当箱の淵への干渉が少ないことが重要である．そこで本研究では，固形食物の獲得について爪楊枝
+を使用した突き刺し機構を提案する．食物を上部から突き刺すことにより，対象の食物以外への干渉が少ない獲
+得動作を目指す．また，人が食事をする際にも使用される爪楊枝を使用することで，人との高い親和性が期待で
+きる． 
+ 
+2. システム構成 
+提案する食事支援システムの構成を図1に示す．図のように，ユーザの正面に土台(Base)付きの多関節ロボッ
+ト(Open Manipulator)を配置し，土台上に食物(Food)を置く．多関節ロボットにより食物を突き刺し口元まで安定
+して運ぶことを目標とし，制御用PCにRobot Operating System (ROS)とMA TLABを導入し制御システムを構築す
+る(図2)．また，深度計測が可能なステレオビジョンのカメラ(Real Sense D435i)を多関節ロボットに取り付け，取
+得した3次元点群データから， 食物やユーザの口の位置をCNNによって認識し， 多関節ロボットのエンドエフェ
+クタ(End effector)に取り付けた爪楊枝により食物を突き刺して， ユーザの口元まで運ぶ動作を実現する． しかし，
+ 
+ 
+[No.24-1] 日本機械学会 2024 年度年次大会 〔2024.9.8-11，愛媛大学〕 
+ 
+爪楊枝を口元まで移動させると危険性と恐怖感が問題となる．そこでスプーンを搭載したエンドエフェクタを用
+いて問題の解決を図る． 
+ 
+ 
+3. 検出方法 
+3・1 食物と口の検出 
+本研究で食物とユーザの口の検出に用いるCNNは，特徴抽出ネットワークであるResidual Network50 
+(ResNet50)と，検出ネットワークであるYOLOv2 Layersを組み合わせて作成する．食物やユーザの口のラベル付
+けを行い，その画像をCNNに学習させることで，入力画像に含まれる食物やユーザの口の特徴を抽出し特徴点
+を囲む矩形(バウンディングボックス)を出力する．本システムでは，Real Sense D435iが取得した3次元点群デー
+タのRGB情報を入力画像としてCNNに与え，食物やユーザの口の検出を行う． 
+ 
+3・2 食物の輪郭検出 
+CNNにより推定された食物を含むバウンディングボックスの中から食物の輪郭を検出し，楕円近似する．近似
+した楕円の長軸方向に沿って食物を突き刺す動作を行う．MA TLABでは，activecontour関数を使うことで，動的
+輪郭モデルのsnakesを適用して輪郭の検出が可能である．検出した輪郭を楕円近似した長軸の角度は，MA TLAB
+の関数であるregionpropsのorientationプロパティを用いて算出される．出力した長軸角度を基に，逆運動学計算
+に設ける関節回転制約により，食物を楕円近似した長軸方向に沿って突き刺す動作を実現する．例として，ハン
+バーグに対して検出を行った結果を図3に示す． 図中の黄枠がバウンディングボックス， 赤枠が検出された輪郭，
+白線が算出した長軸角度であり黄矢印方向からの突き刺しを行う． 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3・3 重心算出と座標変換 
+食物またはユーザの口の学習済みCNNによって，Real Sense D435iが取得したRGB情報から食物やユーザの
+口を検出すると，バウンディングボックスの領域が出力される．出力された領域は，図4に示すように，画像の
+Fig.1  Structure of the proposed meal-assistance system 
+Fig.3  Food contour detection 
+Fig.2  Overview of ROS communication between MA TLAB  
+and Open Manipulator system / Real Sense D435i 
+ 
+ 
+[No.24-1] 日本機械学会 2024 年度年次大会 〔2024.9.8-11，愛媛大学〕 
+ 
+左上のOを原点として，青丸で示す座標(𝑋, 𝑌)と幅𝑙，高さℎの1行4列[𝑋 𝑙 𝑌 ℎ]で表される．バウンディングボッ
+クスの中心X座標𝑋ீと，Y座標𝑌ீの点をROSの座標変換ライブラリであるtfを使ってOpen Manipulatorを基準
+とした座標に変換し， Open Manipulatorのエンドエフェクタの目標座標として逆運動学に使用する． 
+ 
+ 
+ 
+4. 提案するエンドエフェクタ 
+本研究では多関節ロボットのエンドエフェクタ(End effector)に取り付けた爪楊枝により食物を突き刺して，ス
+プーンによりユーザの口元まで運ぶ動作を実現する．より優れた突き刺し方法と差出方法を検証するため，爪楊
+枝の本数や突き刺し角度，突き刺し位置を変更した3種類のエンドエフェクタを開発し，性能評価によってそれ
+らの長所と短所を確認する．3種類のエンドエフェクタはすべて3Dプリンタで作成し，素材はPLAである．  
+ 
+4・1 エンドエフェクタ1 
+エンドエフェクタ1は図5(a)に示すように爪楊枝を斜めから突き刺して食物を把持する．また，図5(b)に示す
+ように可動するスプーンを設け，モータにより姿勢を変化させることが出来る．このスプーンを動かし食物を受
+けた後，爪楊枝を食物から抜きユーザに差し出すことで，安全性を高め恐怖感を軽減させる． 
+ 
+ 
+4・2 エンドエフェクタ2 
+エンドエフェクタ2は図6(a)に示すように爪楊枝を2本使用し左右から突き刺すことで把持力を上げる． また，
+エンドエフェクタ1と比べてスプーンを大きくし差し出しの際に食物を落とす可能性を低くする．図6(b)に示す
+ようにスプーンを動かし食物を受けた後，スプーンをユーザに向けて伸ばすことにより食物をスプーンに対して
+平行に口元まで差し出す． 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig.4  Calculation of the centroid coordinates of user’s mouth 
+Fig.5  Design of end effector1 
+Fig.6  Design of end effector2 
+
+ 
+ 
+[No.24-1] 日本機械学会 2024 年度年次大会 〔2024.9.8-11，愛媛大学〕 
+ 
+4・3 エンドエフェクタ3 
+エンドエフェクタ3は図7(a)に示すようにエンドエフェクタ2と同様に2本の爪楊枝で把持することで把持力
+を上げる．また，スプーンの裏側から爪楊枝を突き刺す．図7(b)に示すように爪楊枝を突き刺した後，爪楊枝ご
+と回転させる．こうすることで，食べやすい姿勢で差し出すことが出来るようにする． 
+ 
+ 
+ 
+5. エンドエフェクタ性能検証実験 
+5・1 食事支援動作 
+食事支援動作の一連の流れを図8に示す．まず，図8(a)のように食物認識姿勢に変形してReal Sense D435iで
+食物を認識する．(b)のようにOpen Manipulatorで食物を突き刺して把持する．次に(c)のようにOpen Manipulator
+を口認識姿勢に変形させ，ユーザの口を認識する．そして，(d)のようにOpen Manipulatorで把持した食物をユー
+ザの口元まで運搬する．以上の流れを食事支援動作の1回の流れとする．本実験では，唐揚げ，ハンバーグ，コ
+ロッケ，焼き魚，ソーセージ，ちくわ，エビフライ，卵焼きの8種類の食物に対して3つのエンドエフェクタそ
+れぞれについて10回行った． 
+ 
+ 
+ 
+4・2 実験結果・考察 
+実験の結果を表1~3に示す．ただし，表では，食べ物それぞれに対する10回の試行における成功率，爪楊枝
+による突き刺し動作の失敗回数，スプーンによる運搬動作の失敗回数が示されている． 
+それぞれのエンドエフェクタの実験結果について考察する．エンドエフェクタ1については1本の爪楊枝では
+十分な把持力が得られないため，コロッケのような柔らかい食物に対して安定した把持が出来なかったと考えら
+れる．差し出しに関してはソーセージのような細長い食物を落としてしまうことが多く，スプーンの大きさを変
+更する必要があると考えられる． 
+エンドエフェクタ2については成功率が90％以上と高い値を示している．爪楊枝を2本にしたことで把持力
+が向上し，安定した把持ができた．差し出しについてもスプーンを大きくしたことで食物を落としづらくなった
+ことで安定した差し出しができた． 
+ 
+Fig.8  Meal support movement of Open Manipulator 
+Fig.7  Design of end effector3 

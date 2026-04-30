@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>基于视线输入机器人的远程学习参与支援系统开发 | Control Engineering Laboratory</title>
+  <meta
+    name="description"
+    content="控制工学研究室关于基于视线输入机器人的远程学习参与支援系统开发的研究说明页面。"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="返回首页">
+        <span class="brand-mark">CRIS</span>
+        <span class="brand-copy">
+          <strong>Control Engineering, Robotics and Intelligent Systems</strong>
+          <span>爱媛大学大学院，理工学研究科，机械智能工学系，控制工学研究室</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="页面导航">
+        <a href="./index.html">返回首页</a>
+        <a href="#background">研究背景</a>
+        <a href="#system">系统构想</a>
+        <a href="#method">方法与实现</a>
+        <a href="#significance">研究意义</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <section class="detail-hero section">
+        <div class="detail-copy">
+          <p class="eyebrow">
+            <span>Research Topic</span>
+            <span>Remote Learning Support with Gaze-Input Robot</span>
+          </p>
+          <h1>基于视线输入机器人的远程学习参与支援系统开发</h1>
+          <p class="hero-text">
+            本研究面向因重度疾病、严重外伤或肢体障碍而长期缺课的儿童与学生，
+            探索通过视线输入与分身机器人实现远程课堂参与的支援系统，
+            以提升其学习机会、课堂参与感与社会性发展体验。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#background">查看研究背景</a>
+            <a class="button button-secondary" href="./index.html">返回首页</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="background" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Background</p>
+          <h2>研究背景</h2>
+        </div>
+        <article class="detail-card">
+          <p>
+            当前，在日本，由于重度疾病或严重外伤等原因，被迫长期在病房或居家环境中生活的儿童与学生数量呈上升趋势。统计数据显示，自平成24年至令和5年期间，因疾病导致长期缺课的中小学生数量持续增加，截至令和5年度已达到约4.5万人。
+          </p>
+          <p>
+            针对长期住院或无法到校的学生，日本各地已开展院内学级与访学教育等措施。然而，这些教育形式仍存在诸多问题。例如，院内学级的建设周期较长，且设立医疗机构数量有限，导致部分地区学生无法享受相关资源；同时，由于感染防控限制，教学材料的使用受到约束，教学内容存在一定局限。此外，受时间安排与人员配置限制，学科教育、综合学习及自立活动等方面的学习机会难以充分保障，在同年龄学生人数较少的情况下，也难以开展同年级协同学习。这些因素可能导致长期缺课学生产生孤独感与心理压力。另一方面，访学教育虽能提供个别化指导，但教师负担较重，且学生难以获得集体生活经验与社会性发展机会。
+          </p>
+          <p>
+            基于上述问题，长期缺课学生相较于在校学生，在学业进展与社会性发展方面存在滞后风险。为此，日本政府已成立远程教育推进相关工作组，虽然当前远程教育仍面临诸多技术与制度性挑战，但其在保障教育公平方面的重要性日益凸显。尤其是在满足个体差异化学习需求方面，结合教师与 ICT 支援人员专业能力，实现双向互动的远程教育模式已成为重要发展方向。
+          </p>
+        </article>
+      </section>
+
+      <section id="system" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">System Concept</p>
+          <h2>系统构想</h2>
+        </div>
+        <article class="detail-card">
+          <p>
+            在此背景下，为实现对长期缺课学生学习机会的有效保障，远程教育系统需具备以下特性：一方面，应充分考虑学生的隐私保护及身体负担，设计无障碍且低负荷的用户交互界面；另一方面，应构建具备临场感的双向互动环境，使学生能够真实参与课堂，同时使教师能够及时掌握学生的理解程度与学习状态。
+          </p>
+          <p>
+            针对上述需求，本研究团队提出了一种基于视线输入的远程课堂参与支援系统。该系统通过让因重度疾病或肢体障碍无法到校的学生在病房或家中，通过视线控制其代理存在的全向移动机器人，即“分身机器人”，实现对课堂环境信息的获取与互动参与。考虑到系统操作需具备直观性与低学习成本，本研究聚焦于利用眼球运动作为输入方式，从而实现即使是重度肢体障碍者也能够自然表达意图的人机交互界面。
+          </p>
+        </article>
+      </section>
+
+      <section id="method" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Method</p>
+          <h2>方法与实现</h2>
+        </div>
+        <div class="card-grid">
+          <article class="info-card detail-card">
+            <h3>既有研究与问题</h3>
+            <p>
+              关于基于视线的机器人控制，已有一定研究基础。例如，已有研究利用可穿戴眼动追踪设备实现视线测量，并通过视线与头部运动控制摄像系统。然而，现有方法存在诸多不足：例如，基于眼电信号或角膜反射的视线检测方法存在一定侵入性，或需使用红外光源，可能对用户产生潜在影响；同时，商业化设备成本较高，不利于广泛推广。另一类方法基于自然光环境下的图像处理进行视线估计，虽无需特殊设备，但存在图像处理复杂、精度较低等问题。此外，多摄像头系统虽可提高精度，但在实际应用中增加了系统复杂性与部署难度。
+            </p>
+          </article>
+          <article class="info-card detail-card">
+            <h3>低成本单摄像头方案</h3>
+            <p>
+              针对上述问题，本研究提出一种基于单摄像头的低成本视线输入方法。系统在用户端配置一台普通 Web 摄像头、显示器及个人计算机，通过摄像头获取用户面部图像，并在计算机上进行实时图像处理，估计用户视线方向。系统根据用户在图像中的关注点变化，实时控制教室内分身机器人的运动以及其搭载摄像头的姿态，从而获取用户所期望的课堂视角。考虑到课堂内的自由移动需求，分身机器人采用全向移动机构，以实现灵活机动的空间导航，使远程用户能够与教师及同学进行自然交流。
+            </p>
+          </article>
+          <article class="info-card detail-card">
+            <h3>视线估计方法</h3>
+            <p>
+              在视线估计方法方面，本研究从面部图像中提取眼部区域，并通过分析瞳孔位置变化进行估计。针对传统方法中因瞳孔被眼睑遮挡或固视微动带来的误差问题，本研究引入能够处理非线性系统状态估计的粒子滤波方法，以提高视线估计的鲁棒性与精度。此外，针对佩戴眼镜用户在现有方法中精度下降的问题，本研究进一步提出适用于佩戴眼镜条件下的高精度视线估计方法，从而提升系统的普适性与易用性。
+            </p>
+          </article>
+          <article class="info-card detail-card">
+            <h3>课堂交互辅助机制</h3>
+            <p>
+              在交互方式方面，传统视线控制方法要求用户主动通过视线选择信息目标，这对于身体状况较差的学生可能带来额外负担。为此，本研究进一步提出一种辅助机制，即系统自动识别教师在课堂中的手势行为，并根据其指示自动突出显示关键教学内容，如黑板重点区域，以减轻用户认知负担并提升学习效率。该功能通过在教室端配置 Kinect 传感器及信息处理系统实现。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="significance" class="section contact-section">
+        <div class="section-heading">
+          <p class="eyebrow">Significance</p>
+          <h2>研究意义</h2>
+        </div>
+        <article class="detail-card">
+          <p>
+            本研究提出的系统不仅适用于长期缺课学生的远程课堂参与，也可推广应用于如新冠疫情背景下的远程教育场景，对于提升远程教育的交互性与沉浸感具有重要意义。
+          </p>
+          <p>
+            后续你可以继续在本页面补充系统结构图、实验设计、演示视频、论文链接、用户评价结果以及与教育支援或福祉工学相关的扩展讨论。
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Control Engineering Laboratory</p>
+      <a href="./index.html">Back to home</a>
+    </footer>
+  </div>
+</body>
+</html>

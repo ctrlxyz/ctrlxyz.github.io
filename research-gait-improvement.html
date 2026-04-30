@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>面向变形性膝关节炎的功能性电刺激步行辅助系统研究 | Control Engineering Laboratory</title>
+  <meta
+    name="description"
+    content="控制工学研究室关于面向变形性膝关节炎的功能性电刺激步行辅助系统研究说明页面。"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="返回首页">
+        <span class="brand-mark">CRIS</span>
+        <span class="brand-copy">
+          <strong>Control Engineering, Robotics and Intelligent Systems</strong>
+          <span>爱媛大学大学院，理工学研究科，机械智能工学系，控制工学研究室</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="页面导航">
+        <a href="./index.html">返回首页</a>
+        <a href="#background">研究背景</a>
+        <a href="#approach">研究方法</a>
+        <a href="#experiment">实验设计</a>
+        <a href="#goal">目标意义</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <section class="detail-hero section">
+        <div class="detail-copy">
+          <p class="eyebrow">
+            <span>Research Topic</span>
+            <span>FES Gait Assistance for Knee Osteoarthritis</span>
+          </p>
+          <h1>面向变形性膝关节炎的功能性电刺激步行辅助系统研究</h1>
+          <p class="hero-text">
+            本研究围绕变形性膝关节炎患者的步行动作改善，探索通过功能性电刺激
+            对膝关节周围肌群进行主动辅助的方法，以减轻关节负荷、改善步行模式，
+            并推动可在家庭环境中持续使用的步行辅助系统开发。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#background">查看研究背景</a>
+            <a class="button button-secondary" href="./index.html">返回首页</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="background" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Background</p>
+          <h2>研究背景</h2>
+        </div>
+        <article class="detail-card">
+          <p>
+            随着出生率下降与人口老龄化加速，日本已进入超高龄社会。由骨骼与关节疾病引起的运动功能障碍，已成为导致高龄者需要支援或护理的重要因素。其中，骨折、跌倒以及关节疾病在导致要介护、要支援的原因中占有较高比例。因此，从护理预防、健康促进和生活质量提升的角度出发，针对骨与关节疾病开展工程化支援技术研究具有重要意义。
+          </p>
+          <p>
+            骨与关节疾病包含多种类型，例如骨折、类风湿性关节炎以及变形性关节症等。其中，变形性关节症是患者人数最多的疾病之一，其主要特征是关节软骨在长期负荷作用下发生压迫、磨损和退变，导致关节面变形与疼痛。特别是下肢关节发生变形性关节症时，步行过程中容易产生关节不稳定、压迫力增加和剪切力增大，从而进一步加速软骨退变，并引发疼痛加重、步行困难和起立动作受限等问题。
+          </p>
+          <p>
+            在变形性关节症中，变形性膝关节症尤为常见。随着高龄人口增加，其患者数量仍呈上升趋势。该疾病常伴随膝关节内翻变形（O 型腿）、膝关节外侧动摇以及膝关节内侧负荷增加。长期来看，这些异常运动和力学负荷会导致内侧关节面磨损、软骨退变和疼痛加重。同时，由于疼痛导致活动量减少，大腿四头肌和小腿三头肌等下肢肌群容易发生萎缩，进而使步行时的关节控制能力下降，形成“疼痛—活动减少—肌力下降—关节不稳定—病情进展”的恶性循环。
+          </p>
+        </article>
+        <figure class="research-figure detail-card">
+          <img src="./assets/knee-oa-pathology.jpg" alt="变形性膝关节炎病态示意图">
+          <figcaption>变形性膝关节炎的病态示意图。</figcaption>
+        </figure>
+      </section>
+
+      <section id="approach" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Approach</p>
+          <h2>研究方法</h2>
+        </div>
+        <div class="card-grid">
+          <article class="info-card detail-card">
+            <h3>现有方法与局限</h3>
+            <p>
+              目前，针对变形性膝关节症的步行辅助方法主要包括手杖、膝关节支具、矫正膝关节排列的足底板等。这些方法能够在一定程度上补偿身体功能，但主要是被动支撑，并不能主动诱发生体肌肉反应，也难以直接改善因疾病引起的肌力下降问题。相比之下，从工程学角度开发能够主动作用于肌肉、促进运动模式改变的步行辅助装置，具有重要研究价值。
+            </p>
+          </article>
+          <article class="info-card detail-card">
+            <h3>功能性电刺激应用</h3>
+            <p>
+              本研究关注的是利用功能性电刺激（Functional Electrical Stimulation, FES）实现变形性膝关节症患者步行动作改善的技术。功能性电刺激是一种在适当时机对目标肌肉施加电刺激、诱发肌肉收缩并辅助运动功能的技术。现有 FES 装置多用于脑卒中后足下垂等神经系统障碍的步行辅助，而将其用于运动器疾病，特别是变形性膝关节症的步行动作改善，目前仍较少见。
+            </p>
+          </article>
+          <article class="info-card detail-card">
+            <h3>步行分析与指标</h3>
+            <p>
+              本研究首先利用三维运动分析系统和床反力计，对双侧变形性膝关节症患者的步行运动进行定量分析，从运动学与动力学角度明确其步行过程中存在的问题。重点关注立脚初期至中期膝关节内侧部位所承受的机械应力、膝关节内翻角度、外部膝关节内翻力矩、床反力以及步行速度、步幅、步频、单脚支撑时间等步行参数。
+            </p>
+          </article>
+          <article class="info-card detail-card">
+            <h3>主动辅助控制</h3>
+            <p>
+              在此基础上，本研究开发一种用于步行中的功能性电刺激装置，通过在适当步态相位对膝关节周围肌群施加电刺激，辅助立脚相中需要较强肌肉活动的阶段，从而诱导步行动作向更理想的模式转变，并减轻膝关节负荷。该方法不同于传统支具或被动辅助工具，其特点在于与生体肌肉收缩时机相同步，通过电刺激主动诱发目标肌肉收缩，不仅有望改善步行姿态，也可能带来一定的肌力增强效果。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experiment" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Experiment</p>
+          <h2>实验设计</h2>
+        </div>
+        <article class="detail-card">
+          <p>
+            研究过程中，将首先在健康受试者模型中进行实验与装置改良，确认其安全性与基本有效性；随后进一步面向变形性膝关节症患者开展步行实验。实验将利用三维运动分析装置和两块床反力计，对关节角度、关节力矩、床反力及多种步行参数进行综合评价，从而验证所提出刺激控制方法的有效性及其对受试者步行功能的改善效果。
+          </p>
+          <p>
+            此外，对于重度双侧变形性膝关节症患者，即使实施功能性电刺激干预，也可能无法获得充分改善，并最终接受人工膝关节全置换术。因此，本研究还关注从双侧变形性膝关节症到单侧人工膝关节全置换术过程中，下肢排列在短期内发生急剧变化时，对手术侧与非手术侧步行功能的影响，并探讨功能性电刺激装置在这一阶段的适用性。
+          </p>
+        </article>
+      </section>
+
+      <section id="goal" class="section contact-section">
+        <div class="section-heading">
+          <p class="eyebrow">Goal</p>
+          <h2>目标意义</h2>
+        </div>
+        <article class="detail-card">
+          <p>
+            本研究的最终目标是开发一种小型、轻量、可携带、适合家庭使用的步行辅助装置。该装置应具备安全、简便、低负担的特点，使变形性膝关节症患者能够在家庭环境中持续进行步行训练，从而减少频繁通院需求，减轻患者身体与心理负担，并有助于降低医疗机构及医疗人员的工作压力。
+          </p>
+          <p>
+            该研究有望为变形性膝关节症患者的步行功能改善、护理预防和福祉工程技术发展作出贡献。
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Control Engineering Laboratory</p>
+      <a href="./index.html">Back to home</a>
+    </footer>
+  </div>
+</body>
+</html>
