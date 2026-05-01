@@ -21,20 +21,13 @@
       </a>
       <nav class="site-nav" aria-label="Page navigation">
         <a href="./index-en.html">Home</a>
-        <a href="#background">Background</a>
-        <a href="#method">Method</a>
-        <a href="#experiment">Experimental Design</a>
-        <a href="#significance">Significance</a>
       </nav>
     </header>
 
     <main class="detail-main">
       <section class="detail-hero section">
         <div class="detail-copy">
-          <p class="eyebrow">
-            <span>Research Topic</span>
-            <span>Remote Learning Support with Gaze-Input Robot</span>
-          </p>
+          <p class="eyebrow"><span>Research Topic</span><span>Remote Learning Support with Gaze-Input Robot</span></p>
           <div class="lang-switch" aria-label="Language switch">
             <a href="./research-remote-learning-robot-ja.html">日本語</a>
             <a href="./research-remote-learning-robot-en.html" aria-current="page">English</a>
@@ -42,67 +35,31 @@
           </div>
           <h1>Development of a Gaze-Input Robot System for Remote Learning Participation Support</h1>
           <p class="hero-text">
-            This research develops a remote learning participation support system for students
-            who cannot attend school for long periods because of illness or disability,
-            using gaze input and an avatar robot to enable classroom participation.
+            A study on remote education systems that support class participation for children and students
+            who cannot attend school for long periods because of severe illness or injury, using gaze input and an avatar robot.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#background">View Background</a>
-            <a class="button button-secondary" href="./index-en.html">Back to Home</a>
-          </div>
         </div>
       </section>
 
-      <section id="background" class="section">
-        <div class="section-heading"><p class="eyebrow">Background</p><h2>Background</h2></div>
+      <section class="section">
         <article class="detail-card">
-          <p>
-            In Japan, the number of children and students who cannot attend school for long periods because of serious illness or injury has been increasing.
-            Existing support mechanisms such as hospital classes and home-visit education are valuable,
-            but they still face limitations in coverage, interactivity, learning opportunities, and support for social development.
-          </p>
-          <p>
-            Remote education systems are therefore expected not only to deliver educational content
-            but also to preserve classroom presence, two-way interaction, and meaningful participation.
-          </p>
-        </article>
-      </section>
+          <p>At present in Japan, there are children and students who are forced to live in hospital rooms because of severe injuries, serious illness, and related conditions. The number of children who are absent from school for long periods because of illness has shown an increasing trend from 2012 to 2023, and in fiscal year 2023 there were approximately 45,000 elementary and junior high school students in this category. As forms of education for children with long-term hospitalization, hospital classes and home-visit education have been implemented in different parts of Japan. However, hospital classes take time to establish, and the number of medical institutions that host them is limited, so there are children who cannot use such services depending on the region. Hospital classes also face restrictions in learning content because educational materials cannot always be brought in sufficiently for infection prevention. In addition, limited learning time means that subject learning, integrated learning, and independent living activities are not fully compensated, and when the number of students of the same grade in a hospital class is small, it may not be possible for them to study together. Children and students in such situations may develop feelings of loneliness and anxiety. Home-visit education also imposes a heavy burden on teachers and does not allow students to learn aspects of group life outside the formal school subjects. Because of these issues, long-term absent students may fall behind students who receive regular school education in terms of academic progress and social development.</p>
 
-      <section id="method" class="section">
-        <div class="section-heading"><p class="eyebrow">Method</p><h2>Method</h2></div>
-        <div class="card-grid">
-          <article class="info-card detail-card"><h3>Single-Camera Gaze Input</h3><p>A low-cost input method using an ordinary web camera and PC is adopted to estimate the learner’s gaze direction with minimal physical burden.</p></article>
-          <article class="info-card detail-card"><h3>Avatar Robot Control</h3><p>The estimated gaze information is used to control an omnidirectional classroom robot and its onboard camera so that the learner can actively obtain desired viewpoints.</p></article>
-          <article class="info-card detail-card"><h3>Robust Gaze Estimation</h3><p>Particle filtering and related techniques are introduced to improve robustness against eyelid occlusion, involuntary eye movement, and the use of glasses.</p></article>
-          <article class="info-card detail-card"><h3>Lesson Understanding Support</h3><p>Teacher pointing gestures are recognized to highlight important areas such as blackboard content, reducing cognitive burden for the learner.</p></article>
-        </div>
-      </section>
+          <p>The Japanese government has organized a task force to promote remote education. Although it recognizes that remote education still faces a variety of challenges, it is seeking strategies for further implementation. In particular, from the perspective of carefully responding to the learning needs of each student, there is increasing demand for bidirectional communication-based remote education that secures learning opportunities while allowing teachers, ICT support staff, and other human resources to demonstrate their expertise.</p>
 
-      <section id="experiment" class="section">
-        <div class="section-heading"><p class="eyebrow">Experiment</p><h2>Experimental Design</h2></div>
-        <article class="detail-card">
-          <p>
-            The experiments evaluate interaction effectiveness, gaze estimation accuracy,
-            robot control stability, and the quality of classroom participation.
-            Technical verification is conducted for gaze input and robot operation,
-            followed by classroom-oriented user studies focusing on presence, burden, and interaction.
-          </p>
-          <p>
-            In addition, the effectiveness of teacher gesture recognition and highlighted instructional cues
-            is examined in relation to learning support and reduced cognitive load.
-          </p>
-        </article>
-      </section>
+          <p>To secure learning opportunities for long-term absent children through remote education, the system needs to provide a barrier-free user interface that takes into account privacy and excessive physical or mental burden. At the same time, when introducing a remote education system, it is desirable to construct a bidirectional communication-based environment in which long-term absent students themselves can feel a sense of presence, while teachers can also perceive and understand their proficiency and comprehension. For this reason, our research group proposes a remote class participation support system in which children and students who cannot attend classes because of severe illness or injury remotely operate an omnidirectional robot that serves as their proxy, using gaze input from a hospital room or home, and participate in class by acquiring surrounding environmental information. Because the operation of the avatar robot must be intuitive and easy, we focus on eye movement, which allows even people with severe physical disabilities to express intention intuitively, and use it to construct the control interface.</p>
 
-      <section id="significance" class="section contact-section">
-        <div class="section-heading"><p class="eyebrow">Significance</p><h2>Significance</h2></div>
-        <article class="detail-card">
-          <p>
-            The goal of this research is to build a remote learning participation support system
-            that combines accessibility, interaction, and immersion for long-term absent students.
-            Its significance lies not only in promoting educational equity,
-            but also in providing a human-centered and practical framework for remote education in diverse real-world situations.
-          </p>
+          <p>Several studies on robot operation through gaze interfaces have already been reported. For example, wearable eye-tracking devices such as Tobii Pro Glasses 2 have been commercialized, and systems have been proposed in which the camera head moves according to the operator’s gaze and head movement so that the object the user wishes to see appears in the center of the display. In conventional gaze direction estimation, methods such as EOG, which uses skin potential differences around the eye, and scleral or corneal reflection methods, which use differences in reflected light between the cornea and sclera, have been reported. However, these methods present problems such as lack of full noninvasiveness for patients, the potential risks associated with infrared irradiation of the eye, and the high cost of infrared-based commercial gaze-input devices. On the other hand, several approaches estimate gaze by processing images of the eye captured under natural light. Although such methods do not require special equipment, they often suffer from low input accuracy because the image processing required to extract the eye is complex. Some methods also use multiple cameras to obtain the parameters needed for measurement, or allow head movement in order to improve gaze estimation accuracy. In welfare settings, however, a low-cost system that can be used with a single camera and a personal computer and is easy to install is highly desirable.</p>
+
+          <p>Taking these problems of conventional gaze-input systems into account, this study installs one web camera, a monitor, and a personal computer on the user side. The web camera mounted above the monitor captures facial images of the user while the user watches classroom video displayed on the screen, and the user’s gaze direction is estimated from those facial images. The captured facial images are processed in real time on the personal computer. According to changes in the user’s point of attention in the image, the system controls both the avatar robot in the classroom and the posture of the camera mounted on that robot so that the classroom view intended by the user can be obtained. In addition, considering that the avatar robot should be able to move in any direction according to the user’s operation, it is equipped with an omnidirectional locomotion mechanism. This allows free movement within the classroom and enables the user, who is a long-term absent student, to communicate with friends and teachers.</p>
+
+          <p>The user’s gaze direction is estimated by extracting the eye region from the facial image and tracking changes in the position of the pupil. A simple method would be to extract the pupil region through threshold processing and obtain its centroid, but depending on gaze direction, part of the pupil may be hidden by the eyelid, and microsaccades may also affect the estimation, resulting in unsatisfactory performance. To solve this problem, this study applies a particle filter, which can estimate states even in nonlinear systems, to gaze direction estimation.</p>
+
+          <p>In addition, conventional approaches to gaze direction estimation from facial images have generally been designed for users without glasses. In this study, we propose a gaze direction estimation method that can achieve accuracy comparable to that for bare-eye users even when the user is wearing glasses. The aim is to free users from the need to remove their glasses in order to use the system and from the inconvenience of having difficulty seeing the screen without them.</p>
+
+          <p>The approaches described above are methods in which the user actively participates in class by changing their own gaze. In such cases, the user must actively direct their attention toward the teacher or the text written on the blackboard within the classroom video shown on the monitor and collect information on their own. For children and students who are forced to live in hospitals because of illness or severe physical disability, this can impose a considerable burden. Therefore, this study further proposes that the system itself should support the user in ways that reduce that burden and promote understanding of the lesson. In other words, the system recognizes gestures generated by the teacher during class and, in response to gestures indicating important parts of the lesson, enlarges and presents those important parts to the user. To realize this support, a Kinect sensor and a personal computer for information processing are installed in the classroom.</p>
+
+          <p>These systems are expected to be useful not only for supporting class participation by long-term absent students, but also for students who attend remote classes because of situations such as the COVID-19 pandemic.</p>
         </article>
       </section>
     </main>
