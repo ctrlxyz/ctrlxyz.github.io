@@ -21,20 +21,13 @@
       </a>
       <nav class="site-nav" aria-label="ページ内ナビ">
         <a href="./index-ja.html">トップ</a>
-        <a href="#background">研究背景</a>
-        <a href="#method">研究方法</a>
-        <a href="#experiment">実験設計</a>
-        <a href="#significance">目標意義</a>
       </nav>
     </header>
 
     <main class="detail-main">
       <section class="detail-hero section">
         <div class="detail-copy">
-          <p class="eyebrow">
-            <span>Research Topic</span>
-            <span>Meal Assistance Robot System</span>
-          </p>
+          <p class="eyebrow"><span>Research Topic</span><span>Meal Assistance Robot System</span></p>
           <div class="lang-switch" aria-label="Language switch">
             <a href="./research-meal-assistance-robot-ja.html" aria-current="page">日本語</a>
             <a href="./research-meal-assistance-robot-en.html">English</a>
@@ -42,67 +35,21 @@
           </div>
           <h1>食事支援ロボットシステムの開発に関する研究</h1>
           <p class="hero-text">
-            本研究は，介護・在宅ケア環境における食事支援を対象に，
-            食物認識，口元認識，マニピュレータ制御，差し出し機構設計，
-            心理評価を統合した支援ロボットシステムの開発を目指しています。
+            介護・在宅ケア環境において，食物認識，口元認識，マニピュレータ制御，
+            差し出し機構，心理評価を統合した食事支援ロボットシステムに関する研究です。
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#background">研究背景を見る</a>
-            <a class="button button-secondary" href="./index-ja.html">トップへ戻る</a>
-          </div>
         </div>
       </section>
 
-      <section id="background" class="section">
-        <div class="section-heading"><p class="eyebrow">Background</p><h2>研究背景</h2></div>
+      <section class="section">
         <article class="detail-card">
-          <p>
-            日本では高齢化の進行と介護人材不足により，食事介助は時間的・身体的負担の大きいケア業務の一つとなっています。
-            上肢機能に制約のある人や継続的な介助を必要とする人に対して，
-            安全かつ安定した食事支援を提供するロボット技術への期待が高まっています。
-          </p>
-          <p>
-            一方で，既存の支援装置には，食物認識の柔軟性，操作の安定性，
-            そして使用者の心理的受容性への配慮などに課題が残っています。
-            そのため，本研究では工学的実現性と人間中心性の両立を重視しています。
-          </p>
-        </article>
-      </section>
+          <p>日本では高齢化の進行と介護人材の不足により，食事介助は現実のケア現場において負担の大きい作業の一つとなっている。上肢機能に制約のある人や継続的な介助を必要とする人に対して，安全で安定し，さらに心理的にも受け入れやすい食事支援ロボットシステムの実現は重要である。こうした背景のもとで，本研究は介護・在宅ケア環境における食事支援の課題に取り組み，介助者の負担を軽減しつつ，利用者の自立性と快適性を高めることを目指している。</p>
 
-      <section id="method" class="section">
-        <div class="section-heading"><p class="eyebrow">Method</p><h2>研究方法</h2></div>
-        <div class="card-grid">
-          <article class="info-card detail-card"><h3>認識と制御</h3><p>ROS，MATLAB，RealSense カメラ，多関節マニピュレータを組み合わせ，食物位置・口元位置・差し出し動作を統合制御します。</p></article>
-          <article class="info-card detail-card"><h3>取得・搬送機構</h3><p>爪楊枝による突き刺しやスプーンによる差し出しなど，固形食物を安定して取得・搬送する末端機構を検討します。</p></article>
-          <article class="info-card detail-card"><h3>独立差し出し機構</h3><p>口元付近では独立した差し出しモジュールを用い，主マニピュレータが顔へ直接近づく不安感を低減します。</p></article>
-          <article class="info-card detail-card"><h3>心理評価</h3><p>差し出し軌道や動作戦略の違いが，安全感，予測可能性，快適性に与える影響を主観評価により分析します。</p></article>
-        </div>
-      </section>
+          <p>本研究の内容は単一の機構や制御法に限定されるものではなく，食物認識，口元位置認識，多関節マニピュレータ制御，差し出し機構設計，さらに利用者の主観評価までを含めたシステム全体として構成されている。研究初期には市販弁当を対象としたシステム構築から始まり，食物認識とマニピュレータ搬送の一連の流れを整備してきた。その後，爪楊枝による突き刺しやスプーンによる口元への差し出しといった具体的な機構へと発展し，固形食物をより安定して扱うための構成が検討されている。さらに，口元近傍では独立した差し出しモジュールを用いることで，主マニピュレータが顔面に直接近づくことによる心理的不安を軽減し，全体としての安全性と受容性を高める方向へ研究が進められている。</p>
 
-      <section id="experiment" class="section">
-        <div class="section-heading"><p class="eyebrow">Experiment</p><h2>実験設計</h2></div>
-        <article class="detail-card">
-          <p>
-            実験では，市販弁当を用いた基礎システム構築から始め，
-            視覚認識，末端機構設計，口元への差し出し，独立差し出しモジュール，
-            そして心理評価へと段階的に研究を発展させます。
-          </p>
-          <p>
-            食物認識精度，搬送成功率，動作安定性に加え，
-            利用者が感じる安心感や受容性も評価指標として取り入れ，
-            実利用に向けたシステムの有効性を多面的に検証します。
-          </p>
-        </article>
-      </section>
+          <p>これらを実現するために，システムでは ROS，MATLAB，RealSense カメラ，多関節マニピュレータが組み合わされている。視覚認識によって食物位置と口元位置を取得し，それに基づいてマニピュレータが対象食物の取得，搬送，差し出しを行う。異なる食物形状や差し出し動作に対しては，複数の末端機構や運動戦略を比較し，操作の安定性，使いやすさ，人間への親和性のバランスを探っている。また，この研究は単に「食物を口元まで運べるか」という工学的課題だけを扱うのではなく，差し出し軌道，接近速度，動作の仕方などが利用者に与える心理的印象にも注目している。そのため，安全感，予測可能性，快適性といった観点から主観評価を行い，システム全体のあり方を検討している。</p>
 
-      <section id="significance" class="section contact-section">
-        <div class="section-heading"><p class="eyebrow">Significance</p><h2>目標意義</h2></div>
-        <article class="detail-card">
-          <p>
-            本研究の目標は，介護・在宅環境で実用的に利用できる食事支援ロボットシステムを確立することです。
-            これにより，介助者の負担軽減と利用者の自立支援を両立し，
-            福祉工学における人にやさしい支援技術の発展へ貢献することを目指します。
-          </p>
+          <p>研究の流れとしては，システム基盤の構築から始まり，視覚認識，機構設計，制御法，そして心理評価へと段階的に発展してきた。こうした取り組みを通して，本研究は介護・在宅ケア環境で実際に利用できる食事支援ロボットシステムの確立を目指している。それは技術的に成立するだけでなく，人にとってやさしく，安心して受け入れられる支援技術であることが求められている。</p>
         </article>
       </section>
     </main>

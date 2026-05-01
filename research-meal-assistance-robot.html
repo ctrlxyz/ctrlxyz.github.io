@@ -6,7 +6,7 @@
   <title>进食支援机器人系统开发研究 | Control Engineering Laboratory</title>
   <meta
     name="description"
-    content="控制工学研究室关于进食支援机器人系统的研究介绍。"
+    content="控制工学研究室关于进食支援机器人系统开发的研究介绍。"
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,20 +28,13 @@
       </a>
       <nav class="site-nav" aria-label="页面导航">
         <a href="./index.html">首页</a>
-        <a href="#background">研究背景</a>
-        <a href="#method">研究方法</a>
-        <a href="#experiment">实验设计</a>
-        <a href="#significance">目标意义</a>
       </nav>
     </header>
 
     <main class="detail-main">
       <section class="detail-hero section">
         <div class="detail-copy">
-          <p class="eyebrow">
-            <span>Research Topic</span>
-            <span>Meal Assistance Robot System</span>
-          </p>
+          <p class="eyebrow"><span>Research Topic</span><span>Meal Assistance Robot System</span></p>
           <div class="lang-switch" aria-label="Language switch">
             <a href="./research-meal-assistance-robot-ja.html">日本語</a>
             <a href="./research-meal-assistance-robot-en.html">English</a>
@@ -49,95 +42,24 @@
           </div>
           <h1>进食支援机器人系统开发研究</h1>
           <p class="hero-text">
-            本研究面向护理与居家照护场景，围绕食物识别、口部识别、机械臂控制、送食机构设计与心理评价，
-            探索兼具安全性、稳定性与可接受性的进食支援机器人系统。
+            面向护理与居家照护环境，围绕食物识别、口部识别、机械臂控制、
+            送食机构与心理评价展开的进食支援机器人系统研究。
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#background">查看研究背景</a>
-            <a class="button button-secondary" href="./index.html">返回首页</a>
-          </div>
         </div>
       </section>
 
-      <section id="background" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Background</p>
-          <h2>研究背景</h2>
-        </div>
+      <section class="section">
         <article class="detail-card">
-          <p>
-            随着日本社会老龄化加速以及护理人力持续紧张，进食介助已成为护理与居家照护中负担较重的任务之一。
-            对于上肢功能受限者或需要长期照护的人群而言，能够安全、稳定地支持独立进食的辅助系统具有重要现实意义。
-          </p>
-          <p>
-            现有的进食支援装置往往在食物识别能力、操作灵活性、对用户心理感受的照顾等方面仍有提升空间。
-            因此，本研究希望从工程实现与用户接受性两个维度出发，构建更适合真实照护场景使用的机器人系统。
-          </p>
-        </article>
-      </section>
+          <p>在日本，随着高龄化发展以及护理与照护人力持续不足，进食介助已经成为现实照护场景中负担较重的一项任务。对于上肢功能受限者、需要长期护理支援的人群而言，能够安全、稳定并且让使用者容易接受的进食支援机器人系统具有重要意义。基于这样的背景，本课题围绕护理与居家环境中的进食支援问题展开，希望通过机器人系统减轻照护负担，并提高使用者在进食过程中的自主性与舒适感。</p>
 
-      <section id="method" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Method</p>
-          <h2>研究方法</h2>
-        </div>
-        <div class="card-grid">
-          <article class="info-card detail-card">
-            <h3>识别与控制</h3>
-            <p>系统结合 ROS、MATLAB、RealSense 相机与多关节机械臂，实现食物位置、口部位置与送食动作的协调控制。</p>
-          </article>
-          <article class="info-card detail-card">
-            <h3>取食与送食机制</h3>
-            <p>围绕牙签穿刺、勺式送食以及多种末端执行器方案，研究固体食物的稳定获取与向口部的平稳递送。</p>
-          </article>
-          <article class="info-card detail-card">
-            <h3>独立送食机构</h3>
-            <p>在口部附近引入独立送食模块，以减少主机械臂直接接近面部所带来的心理负担，并提升安全感。</p>
-          </article>
-          <article class="info-card detail-card">
-            <h3>心理评价</h3>
-            <p>比较不同送食轨迹与动作策略对用户主观感受的影响，分析安全感、可预测性与舒适性的变化。</p>
-          </article>
-        </div>
-      </section>
+          <p>本研究的内容并非仅停留在单一机构或单一控制策略层面，而是从系统整体出发，将食物识别、口部位置识别、多关节机械臂控制、送食机构设计以及用户主观评价结合起来。研究早期从使用市售便当盒的场景出发，逐步构建食物识别与机械臂搬送流程；随后又发展到使用牙签进行刺取、使用勺子进行送入口部等更具体的机构方案，以提升固体食物搬送的稳定性和适应性。在此基础上，还进一步探索了靠近口部时采用独立送食模块的方式，以减少主机械臂直接接近面部所带来的心理不安，并提升整体安全感。</p>
 
-      <section id="experiment" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Experiment</p>
-          <h2>实验设计</h2>
-        </div>
-        <article class="detail-card">
-          <p>
-            本课题将系统开发与实验评价并行推进。研究从使用市售便当的基础系统集成出发，
-            逐步扩展到食物识别、末端机构设计、口部送食、独立送食模块以及用户主观评价。
-            实验中将对识别精度、送食稳定性、动作成功率以及用户心理反馈进行综合比较。
-          </p>
-          <p>
-            通过这一阶段化实验设计，我们希望明确不同机构与控制策略在实际进食支援中的优劣，
-            为后续实用化部署打下基础。
-          </p>
-        </article>
-      </section>
+          <p>为了实现这些功能，系统综合使用了 ROS、MATLAB、RealSense 相机以及多关节机械臂。通过视觉识别获取食物位置与口部位置后，系统控制机械臂完成目标食物的获取、搬送与递送。对于不同食物形态与不同送食动作，研究中还比较了多种末端执行器和运动策略，试图找到在操作稳定性、使用便捷性与人机亲和性之间更合适的平衡点。与此同时，研究并不只关心“能否送到”这一工程问题，也重视使用者在面对送食动作时的心理感受，因此进一步将动作轨迹、送食速度、接近方式等因素纳入主观评价之中，分析安全感、可预测性与舒适性的差异。</p>
 
-      <section id="significance" class="section contact-section">
-        <div class="section-heading">
-          <p class="eyebrow">Significance</p>
-          <h2>目标意义</h2>
-        </div>
-        <article class="detail-card">
-          <p>
-            本研究的目标是开发一种适用于护理与居家环境的进食支援机器人系统，
-            在减轻照护者负担的同时，提高使用者的独立进食机会与心理舒适性。
-            其意义不仅在于机器人机构与控制技术的提升，也在于推动福祉工程在人本照护场景中的实际落地。
-          </p>
+          <p>从研究的发展脉络来看，这一课题已经从系统基础构建逐步扩展到更接近实际应用的阶段：一方面推进视觉识别、机构设计和控制策略的整合，另一方面通过心理评价考察系统在真实照护场景中的可接受性。通过这些工作，本研究希望最终建立一种适用于护理与居家环境的进食支援机器人系统，使其不仅在技术上可实现，而且在人的感受层面也足够温和、安心且易于接受。</p>
         </article>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <p>© 2026 Control Engineering Laboratory</p>
-      <a href="./index.html">Back to home</a>
-    </footer>
   </div>
 </body>
 </html>
